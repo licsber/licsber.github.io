@@ -81,6 +81,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-现存项目里加人是一场豪赌" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/" class="article-date">
+  <time class="dt-published" datetime="2024-02-06T14:15:01.000Z" itemprop="datePublished">2024-02-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/software/">software</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/">现存项目里加人是一场豪赌</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>副标题：谈软工圣经《人月神话》</p>
+<p>我的专业是软件工程，顾名思义，软件和土木之类的相似，也是一个系统性的工程，系统就不免牵扯到人、机、料、法、环的方方面面，其中占据主导因素的就是参与项目的人。</p>
+<p>软件工程，研究的便是如何将「软件项目」以标准化「工程项目」的方式去运作，即，尽量剥离掉人的主观能动性，发挥哪里需要哪里搬的“螺丝钉”作用。而不是像现在众多开源兴趣项目那样，以个人开发者的身份掌管一切、运作一切，一旦原作者弃坑，那么项目即宣告死刑，像ReiserFS作者，进监狱之后，Linux内核就把它标记为了Deprecated，无人问津。</p>
+<p>但是任何人都不是等同的，作为“螺丝钉”也会有不同的型号，这里先不谈作为个体的独特个性，仅仅是为了能够有效的协作，身处同一个项目的“螺丝钉”们就需要不断地交流来对抗信息差，也即<strong>同步信息</strong>。</p>
+<p>以下常见的协作问题很容易遇到：</p>
+<ol>
+<li>大家对项目最终愿景的理解不同（不明白设计初衷&#x2F;不了解最终客户需求）</li>
+<li>同一职能的人们水平不同（项目中老带新非常常见&#x2F;某些新技术只有少数人理解）</li>
+<li>分工角色和责任不明确（同一问题可以从不同方面解决&#x2F;团队中某小团体更为强势）</li>
+</ol>
+<p>对于一些小项目可能无关痛痒，十人以内还属于可以有效对齐的规模，依靠定期的会议沟通，即可同步所有人。但一旦超出规模，还按照原先的方式沟通，项目就可能会脱离控制，因为人与人之间的沟通是全连接型的，这时候人们往往会按职能来拆分小团体解决，比如前端团队、后端团队、运维团队、测试团队，本质上还是各个团队的领头人，即leader，承担了原先的职能作用。</p>
+<p>设想一下，这样的项目团队，在正常的开发迭代周期内，现在接到了加快推进项目的任务，领导决定派遣更多人手来支援、分担项目任务，新加入项目的人可以直接上手干吗？</p>
+<p>很明显不太可能，新人至少需要知道项目需求，阅读项目开始至今的开发文档、会议记录，再和项目组已有的成员沟通细节，才能尽可能地无缝加入项目进程。</p>
+<p>而加入一个人，则意味着团队原先的N人，都新增了N条沟通链路，再加一个人，就又是N+1条链路，人越多只会越乱，最终大家在沟通同步上浪费越来越多的时间，导致项目虽然看上去增加了人手，但效率只会越来越低。</p>
+<p>有没有一种解决方法呢？我认为有，因为问题的本质出在全连接沟通上，假如有这么一个人，他和所有人交流，并且把所有人的信息都同步到和他一致，那全连接的n²级别链路就简化为了n级别，这个人就是项目经理，所以项目经理这样一个角色，职责非常重要，他是项目不至于陷入混乱的前提和保证。</p>
+<p>项目经理就有点类似BGP组网中的路由反射器RR，常规的IBGP节点之间都需要建立全连接关系，有了路由反射器之后，反射器可以作为中间节点汇聚所有路由信息，然后同步给其他IBGP节点，这样节省了节点之间的巨量连线和处理路由信息的额外负载。</p>
+<p><img src="https://img1.sdnlab.com/wp-content/uploads/2017/11/EBGP-IBGP-fig-6.png" alt="https://www.sdnlab.com/20294.html"></p>
+<p>当然《人月神话》作为软件工程的圣经，肯定不止告诉了我们这些，后续我看看结合现实再写一篇心得体会，好书值得慢慢回味~</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://licsber.site/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/" data-id="clsag6nwj0006spu41bbhbhpr" data-title="现存项目里加人是一场豪赌" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" rel="tag">人月神话</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag">项目管理</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-个人能力和个人资源哪个更重要？论“关系户”的合理性" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/" class="article-date">
@@ -123,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://licsber.site/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/" data-id="cls2t6c3w000412u4ev970bj9" data-title="个人能力和个人资源哪个更重要？论“关系户”的合理性" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://licsber.site/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/" data-id="clsag6nwi0004spu422gq69c6" data-title="个人能力和个人资源哪个更重要？论“关系户”的合理性" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -179,7 +241,7 @@
 <li>镜像仓库：阿里云ACR服务（个人免费）</li>
 <li>静态文件服务：nginx</li>
 <li>反向代理服务：Traefik</li>
-<li>图床服务：Minio</li>
+<li>图床服务：Minio + Cloudflare反代（防刷流量）</li>
 <li>服务管理：K8s（杀鸡用激光炮</li>
 </ol>
 <p>欢迎友链~</p>
@@ -187,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://licsber.site/2023/08/20/%E8%A7%86%E9%A2%91-%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%9E%84/" data-id="cls2t6c3v000312u4aoag60no" data-title="视频: 第四次博客重构" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://licsber.site/2023/08/20/%E8%A7%86%E9%A2%91-%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%9E%84/" data-id="clsag6nwh0003spu401vq41k3" data-title="视频: 第四次博客重构" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -239,7 +301,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://licsber.site/2023/08/14/%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92/" data-id="cls2t6c3s000112u4hm178fbm" data-title="知识的诅咒" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://licsber.site/2023/08/14/%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92/" data-id="clsag6nwd0001spu4fjwh1ww6" data-title="知识的诅咒" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -290,7 +352,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://licsber.site/2023/08/08/licsber%E8%8B%B1%E6%96%87%E5%90%8D%E7%9A%84%E7%94%B1%E6%9D%A5/" data-id="cls2t6c3n000012u41g2bayoq" data-title="licsber英文名的由来" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://licsber.site/2023/08/08/licsber%E8%8B%B1%E6%96%87%E5%90%8D%E7%9A%84%E7%94%B1%E6%9D%A5/" data-id="clsag6nw70000spu41t5s5vfw" data-title="licsber英文名的由来" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -312,7 +374,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/my/">my</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/share/">share</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/my/">my</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/share/">share</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/software/">software</a></li></ul>
     </div>
   </div>
 
@@ -322,7 +384,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/K8s/" rel="tag">K8s</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/" rel="tag">video</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/K8s/" rel="tag">K8s</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" rel="tag">人月神话</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag">项目管理</a></li></ul>
     </div>
   </div>
 
@@ -332,7 +394,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/bilibili/" style="font-size: 20px;">bilibili</a> <a href="/tags/video/" style="font-size: 20px;">video</a>
+      <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/bilibili/" style="font-size: 20px;">bilibili</a> <a href="/tags/video/" style="font-size: 20px;">video</a> <a href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" style="font-size: 10px;">人月神话</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" style="font-size: 10px;">项目管理</a>
     </div>
   </div>
 
@@ -341,7 +403,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li></ul>
     </div>
   </div>
 
@@ -352,6 +414,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/">现存项目里加人是一场豪赌</a>
+          </li>
         
           <li>
             <a href="/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/">个人能力和个人资源哪个更重要？论“关系户”的合理性</a>
