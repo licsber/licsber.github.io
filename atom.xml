@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>LicsberBlog</title>
+  
+  <subtitle>来人间一场</subtitle>
+  <link href="https://licsber.site/atom.xml" rel="self"/>
+  
+  <link href="https://licsber.site/"/>
+  <updated>2024-02-07T01:42:42.902Z</updated>
+  <id>https://licsber.site/</id>
+  
+  <author>
+    <name>licsber</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>现存项目里加人是一场豪赌</title>
+    <link href="https://licsber.site/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/"/>
+    <id>https://licsber.site/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/</id>
+    <published>2024-02-06T14:15:01.000Z</published>
+    <updated>2024-02-07T01:42:42.902Z</updated>
+    
+    <content type="html"><![CDATA[<p>带语气视频版：<a href="https://www.bilibili.com/video/BV1ut421a7r1/">https://www.bilibili.com/video/BV1ut421a7r1/</a></p><HTML><iframe src="//player.bilibili.com/player.html?aid=1800476019&bvid=BV1ut421a7r1&cid=1432500559&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></HTML><p>副标题：谈软工圣经《人月神话》</p><p>我的专业是软件工程，顾名思义，软件和土木之类的相似，也是一个系统性的工程，系统就不免牵扯到人、机、料、法、环的方方面面，其中占据主导因素的就是参与项目的人。</p><p>软件工程，研究的便是如何将「软件项目」以标准化「工程项目」的方式去运作，即，尽量剥离掉人的主观能动性，发挥哪里需要哪里搬的“螺丝钉”作用。而不是像现在众多开源兴趣项目那样，以个人开发者的身份掌管一切、运作一切，一旦原作者弃坑，那么项目即宣告死刑，像ReiserFS作者，进监狱之后，Linux内核就把它标记为了Deprecated，无人问津。</p><p>但是任何人都不是等同的，作为“螺丝钉”也会有不同的型号，这里先不谈作为个体的独特个性，仅仅是为了能够有效的协作，身处同一个项目的“螺丝钉”们就需要不断地交流来对抗信息差，也即<strong>同步信息</strong>。</p><p>以下常见的协作问题很容易遇到：</p><ol><li>大家对项目最终愿景的理解不同（不明白设计初衷&#x2F;不了解最终客户需求）</li><li>同一职能的人们水平不同（项目中老带新非常常见&#x2F;某些新技术只有少数人理解）</li><li>分工角色和责任不明确（同一问题可以从不同方面解决&#x2F;团队中某小团体更为强势）</li></ol><p>对于一些小项目可能无关痛痒，十人以内还属于可以有效对齐的规模，依靠定期的会议沟通，即可同步所有人。但一旦超出规模，还按照原先的方式沟通，项目就可能会脱离控制，因为人与人之间的沟通是全连接型的，这时候人们往往会按职能来拆分小团体解决，比如前端团队、后端团队、运维团队、测试团队，本质上还是各个团队的领头人，即leader，承担了原先的职能作用。</p><p>设想一下，这样的项目团队，在正常的开发迭代周期内，现在接到了加快推进项目的任务，领导决定派遣更多人手来支援、分担项目任务，新加入项目的人可以直接上手干吗？</p><p>很明显不太可能，新人至少需要知道项目需求，阅读项目开始至今的开发文档、会议记录，再和项目组已有的成员沟通细节，才能尽可能地无缝加入项目进程。</p><p>而加入一个人，则意味着团队原先的N人，都新增了N条沟通链路，再加一个人，就又是N+1条链路，人越多只会越乱，最终大家在沟通同步上浪费越来越多的时间，导致项目虽然看上去增加了人手，但效率只会越来越低。</p><p>有没有一种解决方法呢？我认为有，因为问题的本质出在全连接沟通上，假如有这么一个人，他和所有人交流，并且把所有人的信息都同步到和他一致，那全连接的n²级别链路就简化为了n级别，这个人就是项目经理，所以项目经理这样一个角色，职责非常重要，他是项目不至于陷入混乱的前提和保证。</p><p>项目经理就有点类似BGP组网中的路由反射器RR，常规的IBGP节点之间都需要建立全连接关系，有了路由反射器之后，反射器可以作为中间节点汇聚所有路由信息，然后同步给其他IBGP节点，这样节省了节点之间的巨量连线和处理路由信息的额外负载。</p><p><img src="https://img1.sdnlab.com/wp-content/uploads/2017/11/EBGP-IBGP-fig-6.png" alt="https://www.sdnlab.com/20294.html"></p><p>当然《人月神话》作为软件工程的圣经，肯定不止告诉了我们这些，后续我看看结合现实再写一篇心得体会，好书值得慢慢回味~</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;带语气视频版：&lt;a href=&quot;https://www.bilibili.com/video/BV1ut421a7r1/&quot;&gt;https://www.bilibili.com/video/BV1ut421a7r1/&lt;/a&gt;&lt;/p&gt;
+&lt;HTML&gt;
+&lt;iframe src=&quot;//</summary>
+      
+    
+    
+    
+    <category term="book" scheme="https://licsber.site/categories/book/"/>
+    
+    
+    <category term="bilibili" scheme="https://licsber.site/tags/bilibili/"/>
+    
+    <category term="video" scheme="https://licsber.site/tags/video/"/>
+    
+    <category term="人月神话" scheme="https://licsber.site/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/"/>
+    
+    <category term="项目管理" scheme="https://licsber.site/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>个人能力和个人资源哪个更重要？论“关系户”的合理性</title>
+    <link href="https://licsber.site/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/"/>
+    <id>https://licsber.site/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/</id>
+    <published>2024-01-14T14:01:06.000Z</published>
+    <updated>2024-02-01T06:00:11.773Z</updated>
+    
+    <content type="html"><![CDATA[<p>带语气视频版：<a href="https://www.bilibili.com/video/BV1vt4y1R7gF/">https://www.bilibili.com/video/BV1vt4y1R7gF/</a></p><HTML><iframe src="//player.bilibili.com/player.html?aid=623764415&bvid=BV1vt4y1R7gF&cid=1406791810&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></HTML><p>讨论区：<a href="https://www.v2ex.com/t/1008613#reply38">https://www.v2ex.com/t/1008613#reply38</a></p><p>这个话题其实开始于大概三年前的一次讨论，当时我身为学校实验室的负责人，在忙活一年一度的招新工作。大致介绍下我们实验室的情况，说是实验室，其实更偏向因兴趣结合，有导师带队的项目工作坊，在机器人竞赛方面有着深厚的经验积累和历年优秀的战绩。大家呢基本都是技术出身，每个人在上位机视觉、下位机控制、硬件和机械结构方面各有所长，因为我是软件方面做得比较多，所以软件类的招新题是我来出。</p><p>在我们软件组内部商量的时候，就有人提出考核的方式是更偏现场小题，还是工程项目类似的综合大题，前者可以确保考察到个人能力，但是考察方面并不全面，现场如果加上偏整体的简答题，招新时间就会太长，后者自己购置材料，完成类似循迹小车、倒立摆一样的综合课题，现场以硬性的性能指标验收，更能反应综合实力和对自动化、电控等方面的理解，但是会存在作弊的问题，即作品可能是由哪些学长学姐、自己家人帮助完成的，招新现场时间较短，可能提问反映不出来到底是不是自己靠实力独立完成的。</p><p>后面我们依然选择了后者，辅以招进来之后集中培训三个月，再来一场笔试考察大家的学习能力。简要讲讲我当时的看法，我和副组长的分歧集中在，面试者如果借用了外力的帮助，这个外力算不算他实力的一部分。我认为算，因为我们招新的目的就是打比赛、写论文、搞专利、做项目，需要能打的人，在项目中遇到一些困难，不管是技术上的困难，还是经济、流程上的困难，都需要人来克服。他这一次通过自己的关系，解决了问题，达成了目的，那下一次在我们的项目中，他也可以继续使用关系来构成帮助，这对我们是有益的。尽管你可能说，这不是他个人实力的一部分，可能做技术的人瞧不起这样没有真才实学的“混子”，但是为了集体的利益目标，他的存在有一定的合理性，而且人不会一直甘愿当一个混子，肯定他也会努力学习，提升自己的实力和话语权的。</p><p>从学校出来步入社会后，我发现工作中也是如此，虽然不想承认，但是“关系户”手里的关系，属于个人资源，确实也是个人实力的一部分。有些事情确实就需要这样的人出马，能减轻工作中很多繁琐，这也是我认为的，能够解决问题就是好的，有一点结果导向论了。奋斗、努力、刻苦钻研，最终解决了一个技术问题固然令人称赞，但是现实世界很多问题都不属于技术问题，纯粹是管理、流程类问题。在这些事情上，你的努力很可能就是事倍功半的，搞不好还会出幺蛾子，所以有时候追寻技术的纯粹性是好，也不能忽视别人在另一条路线上的能力。</p><p>常常听到，你十年寒窗，凭什么比得上我三代经商。那么普通人就毫无翻身之力吗？我认为也不是，现代教育制度其实已经给大家尽可能的机会平等了，在普世追求面前，给自己孩子安排一个工作，子承父业之类的桥段其实已经少了很多，至少看起来已经很不容易了。阶层固化依然存在，但如果不付出努力，大家的阶层都在往下掉，想要保住还是需要后天，不会出现皇子一出生就世袭这样的事情了。</p><p>以上。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;带语气视频版：&lt;a href=&quot;https://www.bilibili.com/video/BV1vt4y1R7gF/&quot;&gt;https://www.bilibili.com/video/BV1vt4y1R7gF/&lt;/a&gt;&lt;/p&gt;
+&lt;HTML&gt;
+&lt;iframe src=&quot;//</summary>
+      
+    
+    
+    
+    <category term="life" scheme="https://licsber.site/categories/life/"/>
+    
+    
+    <category term="bilibili" scheme="https://licsber.site/tags/bilibili/"/>
+    
+    <category term="video" scheme="https://licsber.site/tags/video/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>分享: 第四次博客重构</title>
+    <link href="https://licsber.site/2023/08/20/%E5%88%86%E4%BA%AB%EF%BC%9A%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%9E%84/"/>
+    <id>https://licsber.site/2023/08/20/%E5%88%86%E4%BA%AB%EF%BC%9A%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%9E%84/</id>
+    <published>2023-08-19T19:43:06.000Z</published>
+    <updated>2024-02-07T01:42:42.902Z</updated>
+    
+    <content type="html"><![CDATA[<p>视频介绍版：<a href="https://www.bilibili.com/video/BV1r14y1i71f/">https://www.bilibili.com/video/BV1r14y1i71f/</a></p><HTML><iframe src="//player.bilibili.com/player.html?aid=787456434&bvid=BV1r14y1i71f&cid=1240261255&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe></HTML><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>断断续续博客也重构了四次了</p><p>博客园：<a href="https://www.cnblogs.com/licsber">https://www.cnblogs.com/licsber</a></p><p>语雀：<a href="https://www.yuque.com/licsber/blog">https://www.yuque.com/licsber/blog</a></p><h2 id="目前"><a href="#目前" class="headerlink" title="目前"></a>目前</h2><p>自建：<a href="https://licsber.site/">https://licsber.site</a></p><p>灾备：<a href="http://blog.licsber.site/">http://blog.licsber.site</a></p><h2 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h2><ol><li>博客本体：Hexo（基于NodeJS）</li><li>HTTPS: Let’s Encrypt 泛域名证书</li><li>灾备：Github Pages</li><li>CI&#x2F;CD：手动build Docker镜像</li><li>镜像仓库：阿里云ACR服务（个人免费）</li><li>静态文件服务：nginx</li><li>反向代理服务：Traefik</li><li>图床服务：Minio + Cloudflare反代（防刷流量）</li><li>服务管理：K8s（杀鸡用激光炮</li></ol><p>欢迎友链~</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;视频介绍版：&lt;a href=&quot;https://www.bilibili.com/video/BV1r14y1i71f/&quot;&gt;https://www.bilibili.com/video/BV1r14y1i71f/&lt;/a&gt;&lt;/p&gt;
+&lt;HTML&gt;
+&lt;iframe src=&quot;//p</summary>
+      
+    
+    
+    
+    <category term="tech" scheme="https://licsber.site/categories/tech/"/>
+    
+    
+    <category term="bilibili" scheme="https://licsber.site/tags/bilibili/"/>
+    
+    <category term="video" scheme="https://licsber.site/tags/video/"/>
+    
+    <category term="K8s" scheme="https://licsber.site/tags/K8s/"/>
+    
+    <category term="Hexo" scheme="https://licsber.site/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>知识的诅咒</title>
+    <link href="https://licsber.site/2023/08/14/%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92/"/>
+    <id>https://licsber.site/2023/08/14/%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92/</id>
+    <published>2023-08-14T14:20:06.000Z</published>
+    <updated>2024-02-06T14:23:38.219Z</updated>
+    
+    <content type="html"><![CDATA[<p>知识的诅咒，简单来说就是一旦你掌握了某种知识，就很难站在没掌握这个知识的角度，去思考和理解他人。</p><p>这种信息不对称往往很难意识到，同样也没有银弹，最近几天的深入学习使我深刻地理解了它的意义，在我的知识领域，明白了为什么对于编程的初学者来说，即使是偏向口语化的代码看起来也像天书。</p><p><img src="https://cdn.licsber.site/blog/2023/230814-%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92-%E7%8C%9C%E6%95%B0%E6%B8%B8%E6%88%8F.jpg" alt="很简单的小程序"></p><p>如上图，以程序员懒得去写的猜数游戏为例，规则很简单，代码生成一个随机数，用户不断输入猜测，代码则提示用户输入的数比生成的数大还是小。但我从没意识到的是，短短十几行代码，就已经包含了编译工具链安装和使用、编译执行流程、程序入口点、变量定义、基本语法、类型系统、标准库、输入输出、顺序结构、大小比较运算符、分支结构、模块导入、随机数库调用生成….这么多东西。如果已经有了这些前置知识，没有程序员愿意浪费时间来写一个猜数游戏，因为过于简单，但对于新手来说，正是一些前置知识的缺少造成了毁灭性的后果，编程的学习曲线过于陡峭让他们知难而退，像是一层厚障壁，不突破就只能被永远隔绝在外，永远无法体会编程的乐趣。</p><p>同样，理解我上面这段话也需要一些前置知识，同样受“知识的诅咒”影响，人类真是太可悲了。如：想要理解“没有银弹”，至少需要读过《人月神话》一样，没有这些共享的知识会让交流变得难以进行，变得鸡同鸭讲。</p><p>常识便是教育的最大阻碍，假如无法使用领域内常识性的专业术语，那么我就无法精确描述我擅长领域的某一概念，但一旦使用了这些术语，就会令未掌握这些术语的人感到迷茫，就像是一种诅咒，始终萦绕在上空。</p><p>从这个层面上说，人真的很孤独，拥有共同语言是一件很难的事情，像是我们在评价别人时，也常常难以认识到自己的“习以为常”，殊不知别人不一定有我们同等（优渥或寒酸）的条件、出身，“未经他人苦，莫劝他人善”，我们能做的便只有尊重他人命运，做好自己，过好自己的生活，不过度干涉他人就是最好的处世之道了，剩下的就交给际遇吧。</p><p>说到孤独，在这里也希望我未来的伴侣，如果我还能遇到那个她的话，能够和我拥有着相似的语言，同等或互补的知识架构体系，要不然人间走这一遭也未免太可怜了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;知识的诅咒，简单来说就是一旦你掌握了某种知识，就很难站在没掌握这个知识的角度，去思考和理解他人。&lt;/p&gt;
+&lt;p&gt;这种信息不对称往往很难意识到，同样也没有银弹，最近几天的深入学习使我深刻地理解了它的意义，在我的知识领域，明白了为什么对于编程的初学者来说，即使是偏向口语化的代码</summary>
+      
+    
+    
+    
+    <category term="life" scheme="https://licsber.site/categories/life/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>licsber英文名的由来</title>
+    <link href="https://licsber.site/2023/08/08/licsber%E8%8B%B1%E6%96%87%E5%90%8D%E7%9A%84%E7%94%B1%E6%9D%A5/"/>
+    <id>https://licsber.site/2023/08/08/licsber%E8%8B%B1%E6%96%87%E5%90%8D%E7%9A%84%E7%94%B1%E6%9D%A5/</id>
+    <published>2023-08-07T16:46:11.000Z</published>
+    <updated>2023-08-19T16:50:16.205Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h2><ol><li>当时看了B站一期节目 英文名可以没有任何意义 于是决定给自己整一个</li><li>因为我姓刘 所以想要以L字母开头</li><li>想要自己成为一个完美的辅助 完美的库人才 所以自己名字里加了lib</li><li>为了平衡 后面的字母想要不往上也不往下的 对比起来er不错</li><li>剩下就是随缘增加字母了</li><li>后来因为觉得Licsber看起来不如licsber简短</li><li>所以后续表示名字的时候使用小写 表示我的组织&#x2F;设备时大写</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;原则&quot;&gt;&lt;a href=&quot;#原则&quot; class=&quot;headerlink&quot; title=&quot;原则&quot;&gt;&lt;/a&gt;原则&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;当时看了B站一期节目 英文名可以没有任何意义 于是决定给自己整一个&lt;/li&gt;
+&lt;li&gt;因为我姓刘 所以想要以L字母开头&lt;/li&gt;</summary>
+      
+    
+    
+    
+    <category term="my" scheme="https://licsber.site/categories/my/"/>
+    
+    
+  </entry>
+  
+</feed>
