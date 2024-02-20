@@ -6,7 +6,7 @@
   <link href="https://licsber.site/atom.xml" rel="self"/>
   
   <link href="https://licsber.site/"/>
-  <updated>2024-02-11T16:23:39.885Z</updated>
+  <updated>2024-02-20T15:51:22.802Z</updated>
   <id>https://licsber.site/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>花开堪折直须折</title>
+    <link href="https://licsber.site/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/"/>
+    <id>https://licsber.site/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/</id>
+    <published>2024-02-20T15:49:08.000Z</published>
+    <updated>2024-02-20T15:51:22.802Z</updated>
+    
+    <content type="html"><![CDATA[<p>给你讲一个故事吧。</p><p>母校湖边有一处牌子，上面写着“花开堪赏直须赏，莫要折花空赏枝”。</p><p>我觉得不好。花期到了，恰是最美的时刻。似，恰同学少年，风华正茂，更需把握时机，趁春光正好，趁风头正劲，发挥好这一刻。</p><p>哪怕为了这一刻就此香消玉殒，也要勇敢地去追求，积极地去争取，莫要让时间风化一切，人生从来不是活365天，而是活在每一个耀眼的瞬间。</p><p>依我看来，这正是“花开堪折直须折，莫待无花空折枝”。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;给你讲一个故事吧。&lt;/p&gt;
+&lt;p&gt;母校湖边有一处牌子，上面写着“花开堪赏直须赏，莫要折花空赏枝”。&lt;/p&gt;
+&lt;p&gt;我觉得不好。花期到了，恰是最美的时刻。似，恰同学少年，风华正茂，更需把握时机，趁春光正好，趁风头正劲，发挥好这一刻。&lt;/p&gt;
+&lt;p&gt;哪怕为了这一刻就此香消玉殒，</summary>
+      
+    
+    
+    
+    <category term="life" scheme="https://licsber.site/categories/life/"/>
+    
+    
+    <category term="有感" scheme="https://licsber.site/tags/%E6%9C%89%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker使用buildx来取代传统build并同时构建多架构镜像</title>
