@@ -95,6 +95,55 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-花开堪折直须折" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/" class="article-date">
+  <time class="dt-published" datetime="2024-02-20T15:49:08.000Z" itemprop="datePublished">2024-02-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/life/">life</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/">花开堪折直须折</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>给你讲一个故事吧。</p>
+<p>母校湖边有一处牌子，上面写着“花开堪赏直须赏，莫要折花空赏枝”。</p>
+<p>我觉得不好。花期到了，恰是最美的时刻。似，恰同学少年，风华正茂，更需把握时机，趁春光正好，趁风头正劲，发挥好这一刻。</p>
+<p>哪怕为了这一刻就此香消玉殒，也要勇敢地去追求，积极地去争取，莫要让时间风化一切，人生从来不是活365天，而是活在每一个耀眼的瞬间。</p>
+<p>依我看来，这正是“花开堪折直须折，莫待无花空折枝”。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://licsber.site/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/" data-id="cm2baquq0000gwrpn0lt75x7z" data-title="花开堪折直须折" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%89%E6%84%9F/" rel="tag">有感</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Docker使用buildx来取代传统build并同时构建多架构镜像" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/" class="article-date">
@@ -122,19 +171,19 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Docker更新了build流程，提供了全新的构建工具，原先的<code>docker build</code>命令已经被标记为<code>@deprecated</code>啦！是时候学习新的buildx工具，<del>开始装逼啦</del>努力追上时代啦~</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo pacman -S docker-buildx</span></span><br><span class="line">sudo docker buildx</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo pacman -S docker-buildx</span></span><br><span class="line"><span class="built_in">sudo</span> docker buildx</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Usage:  docker buildx [OPTIONS] COMMAND</span><br><span class="line"></span><br><span class="line">Extended build capabilities with BuildKit</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">      --builder string   Override the configured builder instance</span><br><span class="line"></span><br><span class="line">Management Commands:</span><br><span class="line">  imagetools  Commands to work on images in registry</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  bake        Build from a file</span><br><span class="line">  build       Start a build</span><br><span class="line">  create      Create a new builder instance</span><br><span class="line">  du          Disk usage</span><br><span class="line">  inspect     Inspect current builder instance</span><br><span class="line">  ls          List builder instances</span><br><span class="line">  prune       Remove build cache</span><br><span class="line">  rm          Remove a builder instance</span><br><span class="line">  stop        Stop builder instance</span><br><span class="line">  use         Set the current builder instance</span><br><span class="line">  version     Show buildx version information</span><br><span class="line"></span><br><span class="line">Run &#x27;docker buildx COMMAND --help&#x27; for more information on a command.</span><br></pre></td></tr></table></figure>
 
 <h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>其实吧，和普通的build相比，没啥区别，但是多了好多集成化的功能，请看示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo docker buildx build \</span><br><span class="line">  --platform <span class="variable">$PLATFORM</span> \</span><br><span class="line">  -t <span class="string">&quot;<span class="variable">$IMAGE</span>:<span class="variable">$TAG</span>&quot;</span> \</span><br><span class="line">  -t <span class="string">&quot;<span class="variable">$IMAGE</span>:latest&quot;</span> \</span><br><span class="line">  --pull --push .</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker buildx build \</span><br><span class="line">  --platform <span class="variable">$PLATFORM</span> \</span><br><span class="line">  -t <span class="string">&quot;<span class="variable">$IMAGE</span>:<span class="variable">$TAG</span>&quot;</span> \</span><br><span class="line">  -t <span class="string">&quot;<span class="variable">$IMAGE</span>:latest&quot;</span> \</span><br><span class="line">  --pull --push .</span><br></pre></td></tr></table></figure>
 
 <p>可以看到，pull（始终拉取新镜像，指FROM里的内容），push（自动build后push），platform（新增多架构构建），还是有着节省行数的好处的（</p>
 <p>另外，x86的机器上也可以直接构建arm镜像啦，这里使用树莓派常用的arm64（也就是aarch64）举例，首先我们要建立一个buildx环境：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo docker buildx create \</span><br><span class="line">  --name multi_platform \</span><br><span class="line">  --use --platform \</span><br><span class="line">  linux/amd64,linux/arm64 \</span><br><span class="line">  --driver docker-container</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker buildx create \</span><br><span class="line">  --name multi_platform \</span><br><span class="line">  --use --platform \</span><br><span class="line">  linux/amd64,linux/arm64 \</span><br><span class="line">  --driver docker-container</span><br></pre></td></tr></table></figure>
 
 <p>然后用ls命令即可看到这个环境支持的架构：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker buildx <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker buildx <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">NAME/NODE         DRIVER/ENDPOINT             STATUS  BUILDKIT             PLATFORMS</span><br><span class="line">multi_platform *  docker-container                                         </span><br><span class="line">  multi_platform0 unix:///var/run/docker.sock running v0.12.5              linux/amd64*, linux/arm64*, linux/amd64/v2, linux/amd64/v3, linux/amd64/v4, linux/386</span><br><span class="line">default           docker                                                   </span><br><span class="line">  default         default                     running v0.11.7+d3e6c1360f6e linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/amd64/v4, linux/386</span><br></pre></td></tr></table></figure>
 
@@ -159,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://licsber.site/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/" data-id="cm064zqk3000d8fpn4glvhso7" data-title="Docker使用buildx来取代传统build并同时构建多架构镜像" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://licsber.site/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/" data-id="cm2baqupy000dwrpneptod4pl" data-title="Docker使用buildx来取代传统build并同时构建多架构镜像" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -210,81 +259,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://licsber.site/2024/02/09/%E8%A6%81%E6%8B%92%E7%BB%9D%E7%9C%BC%E9%AB%98%E6%89%8B%E4%BD%8E/" data-id="cm064zqk1000b8fpn84t84e4l" data-title="要拒绝眼高手低" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="https://licsber.site/2024/02/09/%E8%A6%81%E6%8B%92%E7%BB%9D%E7%9C%BC%E9%AB%98%E6%89%8B%E4%BD%8E/" data-id="cm2baqupw000bwrpnchs4amyt" data-title="要拒绝眼高手低" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" rel="tag">软件工程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" rel="tag">随园食单</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-现存项目里加人是一场豪赌" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/" class="article-date">
-  <time class="dt-published" datetime="2024-02-06T14:15:01.000Z" itemprop="datePublished">2024-02-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/book/">book</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/">现存项目里加人是一场豪赌</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>带语气视频版：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ut421a7r1/">https://www.bilibili.com/video/BV1ut421a7r1/</a></p>
-<HTML>
-<iframe src="//player.bilibili.com/player.html?aid=1800476019&bvid=BV1ut421a7r1&cid=1432500559&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</HTML>
-
-<p>副标题：谈软工圣经《人月神话》</p>
-<p>我的专业是软件工程，顾名思义，软件和土木之类的相似，也是一个系统性的工程，系统就不免牵扯到人、机、料、法、环的方方面面，其中占据主导因素的就是参与项目的人。</p>
-<p>软件工程，研究的便是如何将「软件项目」以标准化「工程项目」的方式去运作，即，尽量剥离掉人的主观能动性，发挥哪里需要哪里搬的“螺丝钉”作用。而不是像现在众多开源兴趣项目那样，以个人开发者的身份掌管一切、运作一切，一旦原作者弃坑，那么项目即宣告死刑，像ReiserFS作者，进监狱之后，Linux内核就把它标记为了Deprecated，无人问津。</p>
-<p>但是任何人都不是等同的，作为“螺丝钉”也会有不同的型号，这里先不谈作为个体的独特个性，仅仅是为了能够有效的协作，身处同一个项目的“螺丝钉”们就需要不断地交流来对抗信息差，也即<strong>同步信息</strong>。</p>
-<p>以下常见的协作问题很容易遇到：</p>
-<ol>
-<li>大家对项目最终愿景的理解不同（不明白设计初衷&#x2F;不了解最终客户需求）</li>
-<li>同一职能的人们水平不同（项目中老带新非常常见&#x2F;某些新技术只有少数人理解）</li>
-<li>分工角色和责任不明确（同一问题可以从不同方面解决&#x2F;团队中某小团体更为强势）</li>
-</ol>
-<p>对于一些小项目可能无关痛痒，十人以内还属于可以有效对齐的规模，依靠定期的会议沟通，即可同步所有人。但一旦超出规模，还按照原先的方式沟通，项目就可能会脱离控制，因为人与人之间的沟通是全连接型的，这时候人们往往会按职能来拆分小团体解决，比如前端团队、后端团队、运维团队、测试团队，本质上还是各个团队的领头人，即leader，承担了原先的职能作用。</p>
-<p>设想一下，这样的项目团队，在正常的开发迭代周期内，现在接到了加快推进项目的任务，领导决定派遣更多人手来支援、分担项目任务，新加入项目的人可以直接上手干吗？</p>
-<p>很明显不太可能，新人至少需要知道项目需求，阅读项目开始至今的开发文档、会议记录，再和项目组已有的成员沟通细节，才能尽可能地无缝加入项目进程。</p>
-<p>而加入一个人，则意味着团队原先的N人，都新增了N条沟通链路，再加一个人，就又是N+1条链路，人越多只会越乱，最终大家在沟通同步上浪费越来越多的时间，导致项目虽然看上去增加了人手，但效率只会越来越低。</p>
-<p>有没有一种解决方法呢？我认为有，因为问题的本质出在全连接沟通上，假如有这么一个人，他和所有人交流，并且把所有人的信息都同步到和他一致，那全连接的n²级别链路就简化为了n级别，这个人就是项目经理，所以项目经理这样一个角色，职责非常重要，他是项目不至于陷入混乱的前提和保证。</p>
-<p>项目经理就有点类似BGP组网中的路由反射器RR，常规的IBGP节点之间都需要建立全连接关系，有了路由反射器之后，反射器可以作为中间节点汇聚所有路由信息，然后同步给其他IBGP节点，这样节省了节点之间的巨量连线和处理路由信息的额外负载。</p>
-<p><img src="https://cdn.licsber.site/blog/2024/240206-BGP-RR.png" alt="https://www.sdnlab.com/20294.html"></p>
-<blockquote>
-<p>原图链接：<a target="_blank" rel="noopener" href="https://img1.sdnlab.com/wp-content/uploads/2017/11/EBGP-IBGP-fig-6.png">https://img1.sdnlab.com/wp-content/uploads/2017/11/EBGP-IBGP-fig-6.png</a></p>
-</blockquote>
-<p>当然《人月神话》作为软件工程的圣经，肯定不止告诉了我们这些，后续我看看结合现实再写一篇心得体会，好书值得慢慢回味~</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://licsber.site/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/" data-id="cm064zqk000098fpnaetgbw11" data-title="现存项目里加人是一场豪赌" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/" rel="tag">video</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" rel="tag">人月神话</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" rel="tag">软件工程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag">项目管理</a></li></ul>
 
     </footer>
   </div>
@@ -319,7 +298,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/K8s/" rel="tag">K8s</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LOVE/" rel="tag">LOVE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/buildx/" rel="tag">buildx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" rel="tag">人月神话</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E9%97%AE%E9%A2%98/" rel="tag">人生问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%89%E6%84%9F/" rel="tag">有感</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" rel="tag">软件工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" rel="tag">随园食单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag">项目管理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" rel="tag">项目经理</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/K8s/" rel="tag">K8s</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LOVE/" rel="tag">LOVE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/buildx/" rel="tag">buildx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" rel="tag">人月神话</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E9%97%AE%E9%A2%98/" rel="tag">人生问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%88%E8%80%B6%E5%85%8B/" rel="tag">哈耶克</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%89%E6%84%9F/" rel="tag">有感</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" rel="tag">软件工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/" rel="tag">通往奴役之路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" rel="tag">随园食单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag">项目管理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" rel="tag">项目经理</a></li></ul>
     </div>
   </div>
 
@@ -329,7 +308,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/LOVE/" style="font-size: 13.33px;">LOVE</a> <a href="/tags/bilibili/" style="font-size: 20px;">bilibili</a> <a href="/tags/buildx/" style="font-size: 10px;">buildx</a> <a href="/tags/video/" style="font-size: 20px;">video</a> <a href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" style="font-size: 16.67px;">人月神话</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E9%97%AE%E9%A2%98/" style="font-size: 10px;">人生问题</a> <a href="/tags/%E6%9C%89%E6%84%9F/" style="font-size: 10px;">有感</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" style="font-size: 16.67px;">软件工程</a> <a href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" style="font-size: 10px;">随园食单</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" style="font-size: 13.33px;">项目管理</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" style="font-size: 10px;">项目经理</a>
+      <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/LOVE/" style="font-size: 13.33px;">LOVE</a> <a href="/tags/bilibili/" style="font-size: 20px;">bilibili</a> <a href="/tags/buildx/" style="font-size: 10px;">buildx</a> <a href="/tags/video/" style="font-size: 20px;">video</a> <a href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" style="font-size: 16.67px;">人月神话</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E9%97%AE%E9%A2%98/" style="font-size: 10px;">人生问题</a> <a href="/tags/%E5%93%88%E8%80%B6%E5%85%8B/" style="font-size: 10px;">哈耶克</a> <a href="/tags/%E6%9C%89%E6%84%9F/" style="font-size: 10px;">有感</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" style="font-size: 16.67px;">软件工程</a> <a href="/tags/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/" style="font-size: 10px;">通往奴役之路</a> <a href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" style="font-size: 10px;">随园食单</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" style="font-size: 13.33px;">项目管理</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" style="font-size: 10px;">项目经理</a>
     </div>
   </div>
 
@@ -338,7 +317,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">十月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li></ul>
     </div>
   </div>
 
@@ -349,6 +328,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/10/16/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/">通往奴役之路（一）</a>
+          </li>
         
           <li>
             <a href="/2024/06/30/%E4%BD%95%E4%B8%BA%E7%88%B1%E6%83%85/">何为爱情</a>
@@ -364,10 +347,6 @@
         
           <li>
             <a href="/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/">Docker使用buildx来取代传统build并同时构建多架构镜像</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/09/%E8%A6%81%E6%8B%92%E7%BB%9D%E7%9C%BC%E9%AB%98%E6%89%8B%E4%BD%8E/">要拒绝眼高手低</a>
           </li>
         
       </ul>
