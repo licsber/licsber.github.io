@@ -1,0 +1,166 @@
+body {
+    font-family: '微软雅黑', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+}
+
+#issueInput {
+    flex: none;
+    width: 80px;
+}
+
+#dateInput {
+    flex: none;
+    width: 120px;
+}
+
+.input-group button {
+    padding: 8px 16px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.input-group button:hover {
+    background-color: #1976D2;
+}
+
+.list {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.countdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.item-info {
+    flex: 1;
+    max-width: 60%;
+}
+
+.days-large {
+    color: #1976D2;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.delete-btn {
+    font-size: 12px;
+    color: #6c757d;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: #2196F3;
+}
+
+.import-export-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.export-btn,
+.import-btn {
+    flex: 1;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.export-btn:hover,
+.import-btn:hover {
+    background-color: #1976D2;
+}
+
+.item-info .name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 5px;
+}
+
+.item-info .target-date {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.date-and-delete {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.delete-btn {
+    margin-top: 0;
+    align-self: center;
+}
+
+.days-future {
+    color: #2196F3;
+    font-weight: bold;
+}
+
+.days-past {
+    color: #FFA500;
+}
+
+.days-today {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.issue-link {
+    color: #2196F3;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 10px;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.issue-plain {
+    color: #212529;
+    margin-left: 10px;
+    max-width: 300px;
+    word-wrap: break-word;
+}
