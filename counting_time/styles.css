@@ -1,8 +1,43 @@
 body {
     font-family: '微软雅黑', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     background-color: #f8f9fa;
+}
+
+/* 移动端响应式调整 */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #issueInput, #dateInput {
+        width: 100% !important;
+        flex: 1;
+    }
+
+    .days-large {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .item-info {
+        max-width: 50%;
+    }
+
+    .item-info .name {
+        font-size: 14px;
+    }
+
+    .import-export-group {
+        flex-direction: column;
+    }
 }
 
 .container {
