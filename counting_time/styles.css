@@ -1,8 +1,21 @@
+:root {
+    --primary-color: #2196F3;
+    --primary-dark: #1976D2;
+    --text-dark: #212529;
+    --text-gray: #6c757d;
+    --border-light: #e9ecef;
+    --border-gray: #f1f3f5;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --success-color: #4CAF50;
+    --warning-color: #FFA500;
+}
+
 body {
     font-family: '微软雅黑', sans-serif;
     margin: 0;
     padding: 10px;
-    background-color: #f8f9fa;
+    background-color: var(--bg-light);
 }
 
 /* 移动端响应式调整 */
@@ -17,7 +30,8 @@ body {
         gap: 10px;
     }
 
-    #issueInput, #dateInput {
+    #issueInput,
+    #dateInput {
         width: 100% !important;
         flex: 1;
     }
@@ -54,7 +68,7 @@ body {
 .input-group input {
     flex: 1;
     padding: 8px;
-    border: 1px solid #e9ecef;
+    border: 1px solid var(--border-light);
     border-radius: 4px;
 }
 
@@ -68,9 +82,9 @@ body {
     width: 120px;
 }
 
-.input-group button {
+.btn-primary {
     padding: 8px 16px;
-    background-color: #2196F3;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 4px;
@@ -78,8 +92,8 @@ body {
     transition: background-color 0.3s;
 }
 
-.input-group button:hover {
-    background-color: #1976D2;
+.btn-primary:hover {
+    background-color: var(--primary-dark);
 }
 
 .list {
@@ -94,34 +108,50 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    border-bottom: 1px solid #f1f3f5;
+    border-bottom: 1px solid var(--border-gray);
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 15px;
 }
 
 .item-info {
     flex: 1;
-    max-width: 60%;
+    min-width: 0;
+}
+
+.countdown-item[data-created-at]:not([data-created-at=''])::before {
+    content: attr(data-created-at);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 10;
+    display: inline-block;
+}
+
+.countdown-item[data-created-at]:not([data-created-at='']):hover::before {
+    opacity: 1;
 }
 
 .days-large {
-    color: #1976D2;
+    color: var(--primary-dark);
     font-size: 24px;
     font-weight: bold;
     margin: 0 15px;
+    flex-shrink: 0;
 }
 
-.delete-btn {
-    font-size: 12px;
-    color: #6c757d;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin-top: 4px;
-    transition: color 0.3s;
-}
 
-.delete-btn:hover {
-    color: #2196F3;
-}
 
 .import-export-group {
     display: flex;
@@ -129,34 +159,36 @@ body {
     margin-top: 20px;
 }
 
-.export-btn,
-.import-btn {
+.export-btn, .import-btn {
     flex: 1;
     padding: 10px 20px;
-    background-color: #2196F3;
+    font-size: 14px;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 14px;
     transition: background-color 0.3s;
 }
 
-.export-btn:hover,
-.import-btn:hover {
-    background-color: #1976D2;
+.export-btn:hover, .import-btn:hover {
+    background-color: var(--primary-dark);
 }
 
 .item-info .name {
     font-size: 16px;
     font-weight: bold;
-    color: #212529;
+    color: var(--text-dark);
     margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .item-info .target-date {
     font-size: 12px;
-    color: #6c757d;
+    color: var(--text-gray);
 }
 
 .date-and-delete {
@@ -165,36 +197,52 @@ body {
     gap: 10px;
 }
 
-.delete-btn {
-    margin-top: 0;
-    align-self: center;
-}
-
-.days-future {
-    color: #2196F3;
-    font-weight: bold;
-}
-
-.days-past {
-    color: #FFA500;
-}
-
-.days-today {
-    color: #4CAF50;
-    font-weight: bold;
-}
-
-.issue-link {
-    color: #2196F3;
-    text-decoration: underline;
-    cursor: pointer;
+.issue-common {
     margin-left: 10px;
     max-width: 300px;
     word-wrap: break-word;
 }
 
 .issue-plain {
-    color: #212529;
+    font-size: 12px;
+    color: var(--text-gray);
+    font-weight: normal;
+}
+
+.delete-btn {
+    font-size: 12px;
+    color: var(--text-gray);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: 0;
+    align-self: center;
+    transition: color 0.3s;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    color: var(--primary-color);
+}
+
+.days-future {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.days-past {
+    color: var(--warning-color);
+}
+
+.days-today {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.issue-link {
+    color: var(--primary-color);
+    text-decoration: underline;
+    cursor: pointer;
     margin-left: 10px;
     max-width: 300px;
     word-wrap: break-word;
