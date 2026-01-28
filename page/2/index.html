@@ -1,366 +1,892 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  
-  <title>LicsberBlog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="licsber滴个人博客 望赛博永生(">
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="licsber滴个人博客 望赛博永生(">
+<meta name="keywords" content="技术宅,生活">
+<meta name="author" content="licsber">
+<meta name="theme-color" content="#DFFF00">
+
+
+  <title>LicsberBlog | 来人间一场</title>
+
+
+<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="LicsberBlog">
-<meta property="og:url" content="https://licsber.site/page/2/">
-<meta property="og:site_name" content="LicsberBlog">
 <meta property="og:description" content="licsber滴个人博客 望赛博永生(">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="licsber">
-<meta property="article:tag" content="技术宅">
-<meta property="article:tag" content="生活">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="LicsberBlog" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+<meta property="og:url" content="https://licsber.site/page/2/index.html">
+<meta property="og:site_name" content="LicsberBlog">
 
-  
-  
+<meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&amp;q=80">
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LicsberBlog">
+<meta name="twitter:description" content="licsber滴个人博客 望赛博永生(">
+
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&amp;q=80">
+
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<!-- RSS -->
+
+  <link rel="alternate" href="atom.xml" title="LicsberBlog" type="application/atom+xml">
+
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+
 <link rel="stylesheet" href="/css/style.css">
 
-  
+
+  <meta name="generator" content="Hexo 8.1.1"></head>
+  <body>
+    <!-- Scroll Progress Bar -->
     
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<div class="scroll-progress" id="scroll-progress"></div>
 
-  
-  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
 
-<meta name="generator" content="Hexo 8.1.1"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">LicsberBlog</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">来人间一场</a>
-        </h2>
-      
+    <!-- Navigation -->
+    
+
+
+<nav class="nav-container" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="/" class="nav-logo">
+        LicsberBlog
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links-desktop">
+        
+          <a href="/" class="nav-link">
+            首页
+          </a>
+        
+          <a href="/archives/" class="nav-link">
+            归档
+          </a>
+        
+          <a href="/friends/" class="nav-link">
+            友链
+          </a>
+        
+          <a href="/timeline/" class="nav-link">
+            时间线
+          </a>
+        
+          <a href="/about/" class="nav-link">
+            关于
+          </a>
+        
+
+        <!-- Social Icons -->
+        
+          <a href="https://github.com/licsber" target="_blank" rel="noopener noreferrer" class="nav-link nav-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        
+        
+          <a href="/atom.xml" class="nav-link nav-icon" aria-label="RSS">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11a9 9 0 0 1 9 9"></path>
+              <path d="M4 4a16 16 0 0 1 16 16"></path>
+              <circle cx="5" cy="19" r="1"></circle>
+            </svg>
+          </a>
+        
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="打开菜单">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-links-mobile" id="nav-links-mobile">
+      
+        <a href="/" class="nav-link">
+          首页
+        </a>
+      
+        <a href="/archives/" class="nav-link">
+          归档
+        </a>
+      
+        <a href="/friends/" class="nav-link">
+          友链
+        </a>
+      
+        <a href="/timeline/" class="nav-link">
+          时间线
+        </a>
+      
+        <a href="/about/" class="nav-link">
+          关于
+        </a>
+      
+      <div class="mobile-social-links">
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/friends">Friends</a>
-        
-          <a class="main-nav-link" href="/counting_time">Timeline</a>
-        
-          <a class="main-nav-link" href="/about">About</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          
-            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/licsber"><span class="fa fa-github"></span></a>
-          
+          <a href="https://github.com/licsber" target="_blank" rel="noopener noreferrer" class="nav-link nav-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
         
         
-          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+          <a href="/atom.xml" class="nav-link nav-icon" aria-label="RSS">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11a9 9 0 0 1 9 9"></path>
+              <path d="M4 4a16 16 0 0 1 16 16"></path>
+              <circle cx="5" cy="19" r="1"></circle>
+            </svg>
+          </a>
         
-        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://licsber.site"></form>
       </div>
     </div>
   </div>
-</header>
+</nav>
 
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-花开堪折直须折" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/" class="article-date">
-  <time class="dt-published" datetime="2024-02-20T15:49:08.000Z" itemprop="datePublished">2024-02-20</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/life/">life</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
+    <!-- Main Content -->
     
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/">花开堪折直须折</a>
+
+
+<section class="hero-section" id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-scan-line"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="typewriter-text" id="typewriter" data-phrases='["Feel Alive","Stay Hungry & Foolish","Make it Better","LicsberBlog"]'></span>
+      <span class="cursor">_</span>
     </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>给你讲一个故事吧。</p>
-<p>母校湖边有一处牌子，上面写着“花开堪赏直须赏，莫要折花空赏枝”。</p>
-<p>我觉得不好。花期到了，恰是最美的时刻。似，恰同学少年，风华正茂，更需把握时机，趁春光正好，趁风头正劲，发挥好这一刻。</p>
-<p>哪怕为了这一刻就此香消玉殒，也要勇敢地去追求，积极地去争取，莫要让时间风化一切，人生从来不是活365天，而是活在每一个耀眼的瞬间。</p>
-<p>依我看来，这正是“花开堪折直须折，莫待无花空折枝”。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://licsber.site/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/" data-id="cuidt6mstT8HljO04QO6l_RoS" data-title="花开堪折直须折" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%9C%89%E6%84%9F/" rel="tag">有感</a></li></ul>
-
-    </footer>
+    <p class="hero-subtitle">来人间一场~</p>
   </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Docker使用buildx来取代传统build并同时构建多架构镜像" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/" class="article-date">
-  <time class="dt-published" datetime="2024-02-11T16:22:07.000Z" itemprop="datePublished">2024-02-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/tech/">tech</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/">Docker使用buildx来取代传统build并同时构建多架构镜像</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Docker更新了build流程，提供了全新的构建工具，原先的<code>docker build</code>命令已经被标记为<code>@deprecated</code>啦！是时候学习新的buildx工具，<del>开始装逼啦</del>努力追上时代啦~</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo pacman -S docker-buildx</span></span><br><span class="line"><span class="built_in">sudo</span> docker buildx</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Usage:  docker buildx [OPTIONS] COMMAND</span><br><span class="line"></span><br><span class="line">Extended build capabilities with BuildKit</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">      --builder string   Override the configured builder instance</span><br><span class="line"></span><br><span class="line">Management Commands:</span><br><span class="line">  imagetools  Commands to work on images in registry</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line">  bake        Build from a file</span><br><span class="line">  build       Start a build</span><br><span class="line">  create      Create a new builder instance</span><br><span class="line">  du          Disk usage</span><br><span class="line">  inspect     Inspect current builder instance</span><br><span class="line">  ls          List builder instances</span><br><span class="line">  prune       Remove build cache</span><br><span class="line">  rm          Remove a builder instance</span><br><span class="line">  stop        Stop builder instance</span><br><span class="line">  use         Set the current builder instance</span><br><span class="line">  version     Show buildx version information</span><br><span class="line"></span><br><span class="line">Run &#x27;docker buildx COMMAND --help&#x27; for more information on a command.</span><br></pre></td></tr></table></figure>
-
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>其实吧，和普通的build相比，没啥区别，但是多了好多集成化的功能，请看示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker buildx build \</span><br><span class="line">  --platform <span class="variable">$PLATFORM</span> \</span><br><span class="line">  -t <span class="string">&quot;<span class="variable">$IMAGE</span>:<span class="variable">$TAG</span>&quot;</span> \</span><br><span class="line">  -t <span class="string">&quot;<span class="variable">$IMAGE</span>:latest&quot;</span> \</span><br><span class="line">  --pull --push .</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，pull（始终拉取新镜像，指FROM里的内容），push（自动build后push），platform（新增多架构构建），还是有着节省行数的好处的（</p>
-<p>另外，x86的机器上也可以直接构建arm镜像啦，这里使用树莓派常用的arm64（也就是aarch64）举例，首先我们要建立一个buildx环境：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker buildx create \</span><br><span class="line">  --name multi_platform \</span><br><span class="line">  --use --platform \</span><br><span class="line">  linux/amd64,linux/arm64 \</span><br><span class="line">  --driver docker-container</span><br></pre></td></tr></table></figure>
-
-<p>然后用ls命令即可看到这个环境支持的架构：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> docker buildx <span class="built_in">ls</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">NAME/NODE         DRIVER/ENDPOINT             STATUS  BUILDKIT             PLATFORMS</span><br><span class="line">multi_platform *  docker-container                                         </span><br><span class="line">  multi_platform0 unix:///var/run/docker.sock running v0.12.5              linux/amd64*, linux/arm64*, linux/amd64/v2, linux/amd64/v3, linux/amd64/v4, linux/386</span><br><span class="line">default           docker                                                   </span><br><span class="line">  default         default                     running v0.11.7+d3e6c1360f6e linux/amd64, linux/amd64/v2, linux/amd64/v3, linux/amd64/v4, linux/386</span><br></pre></td></tr></table></figure>
-
-<p>可以看到，后面有些奇怪的东西，x86怎么还有v2、v3、v4，这激发了我的好奇心，搜索发现，其实是指令集更新的区别，这里Golang给的最直观：</p>
-<p>来自：<a target="_blank" rel="noopener" href="https://go.dev/wiki/MinimumRequirements">https://go.dev/wiki/MinimumRequirements</a></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GOAMD64=v1 (default): The baseline. Exclusively generates instructions that all 64-bit x86 processors can execute.</span><br><span class="line">GOAMD64=v2: all v1 instructions, plus CMPXCHG16B, LAHF, SAHF, POPCNT, SSE3, SSE4.1, SSE4.2, SSSE3.</span><br><span class="line">GOAMD64=v3: all v2 instructions, plus AVX, AVX2, BMI1, BMI2, F16C, FMA, LZCNT, MOVBE, OSXSAVE.</span><br><span class="line">GOAMD64=v4: all v3 instructions, plus AVX512F, AVX512BW, AVX512CD, AVX512DQ, AVX512VL.</span><br></pre></td></tr></table></figure>
-
-<h2 id="检测"><a href="#检测" class="headerlink" title="检测"></a>检测</h2><p>关于自己的发行版目前支持的指令集，可以用以下命令查看：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/lib/ld-linux-x86-64.so.2 --<span class="built_in">help</span> | grep <span class="string">&quot;x86-64-v&quot;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x86-64-v4 (supported, searched)</span><br><span class="line">x86-64-v3 (supported, searched)</span><br><span class="line">x86-64-v2 (supported, searched)</span><br></pre></td></tr></table></figure>
-
-<p>还有不少人（Gentoo狂热者？）把自己电脑里所有程序都改成v4构建的，以提高性能，Ubuntu文档里就有这样说：</p>
-<p><a target="_blank" rel="noopener" href="https://cn.ubuntu.com/blog/optimising-ubuntu-performance-on-amd64-architecture_cn">https://cn.ubuntu.com/blog/optimising-ubuntu-performance-on-amd64-architecture_cn</a></p>
-<p>还有Arch系的大佬介绍：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.chyk.ink/2022/08/11/arch-linux-upgrade-to-x86-64-v3-microarchitecture/">https://blog.chyk.ink/2022/08/11/arch-linux-upgrade-to-x86-64-v3-microarchitecture/</a></p>
-<h2 id="视频演示"><a href="#视频演示" class="headerlink" title="视频演示"></a>视频演示</h2><p>B站：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14A4m1V7zT/">https://www.bilibili.com/video/BV14A4m1V7zT/</a></p>
-<HTML>
-<iframe src="//player.bilibili.com/player.html?aid=1100730648&bvid=BV14A4m1V7zT&cid=1437275112&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-</HTML>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://licsber.site/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/" data-id="cuidfCyppLmkvZIwhHLgjhLJw" data-title="Docker使用buildx来取代传统build并同时构建多架构镜像" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/buildx/" rel="tag">buildx</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/video/" rel="tag">video</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-要拒绝眼高手低" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/02/09/%E8%A6%81%E6%8B%92%E7%BB%9D%E7%9C%BC%E9%AB%98%E6%89%8B%E4%BD%8E/" class="article-date">
-  <time class="dt-published" datetime="2024-02-09T06:24:06.000Z" itemprop="datePublished">2024-02-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/life/">life</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/02/09/%E8%A6%81%E6%8B%92%E7%BB%9D%E7%9C%BC%E9%AB%98%E6%89%8B%E4%BD%8E/">要拒绝眼高手低</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Make your hands dirty!</p>
-<p>尝试去慢慢做一些practical的事情，会让你减轻许多焦虑感，掌握一技在手，安全感也就自然而然。</p>
-<p>其实我比较羡慕厨师这个行业，一技在手，别人都会夸你“烧得一手好菜”。但是厨子和外界的联系太多了，袁枚有言“凡物各有先天，物性不良，虽易牙烹之，亦无味也”，厨子需要外界提供上好的食材，需要屠夫和菜农，但他们在现代标准化的流程中丧失了其风味，连带影响了上游的创造者，限制了其发挥。</p>
-<p>但是计算机是一个从无到有的世界，是构筑在现代数学之上的理想国。普通家庭花3000块买个电脑，带来的创造性不会比九万八的苹果电脑更低，这其中人的主观能动性更为重要，这也是张雪峰所说“计算机是穷人家孩子的首选”之由来，相对而言，投入的本金很少，产出很高，也即性价比很高。</p>
-<p>喜欢计算机，作为技术人，编程是充满乐趣的创造性工作（此处的工作不是认真工作中的工作，而是诸事自己掌控，脑力的结晶），看着自己写的代码一个个work起来，心中的喜悦是溢于言表的，要记住这种感觉，时常体会，才能让自己不至于陷于迷茫。</p>
-<p>有些同学质疑项目越来越壮大之后，个人的掌控力会渐渐不足，毕竟软件开发工作是复杂的，虽然我们在极力用各种工程实践让一切变得有序可控，但它依然是依赖个人能力的一种创造性活动。这时候就需要一个舵手作为领导者来把控方向，作为领导者，我认为也不能带着白手套，而是积极参与，深入实践。这样才能最大程度的避免外行指导内行，要跟随最新的技术趋势，保持自己的核心竞争力。</p>
-<p>愿不忘初心。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://licsber.site/2024/02/09/%E8%A6%81%E6%8B%92%E7%BB%9D%E7%9C%BC%E9%AB%98%E6%89%8B%E4%BD%8E/" data-id="cuidPuHzxTLyAUUJcKXDUFufK" data-title="要拒绝眼高手低" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" rel="tag">软件工程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" rel="tag">随园食单</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/">下一页 &raquo;</a>
-  </nav>
-
 </section>
-        
-          <aside id="sidebar">
+
+<script>
+(function() {
+  const typewriter = document.getElementById('typewriter');
+  if (!typewriter) return;
   
+  const phrases = JSON.parse(typewriter.dataset.phrases || '[""]');
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 100;
+  
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">分类</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/book/">book</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/life/">life</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/my/">my</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/tech/">tech</a></li></ul>
-    </div>
+    if (isDeleting) {
+      typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      typeSpeed = 50;
+    } else {
+      typewriter.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      typeSpeed = 100;
+    }
+    
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      isDeleting = true;
+      typeSpeed = 2000;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      typeSpeed = 500;
+    }
+    
+    setTimeout(type, typeSpeed);
+  }
+  
+  setTimeout(type, 1000);
+})();
+</script>
+
+
+
+<main class="main-content">
+  <div class="content-grid">
+    <!-- Blog Posts -->
+    <div class="content-main">
+      <div class="blog-list">
+        
+          
+<article class="blog-card" data-animate>
+  <div class="blog-card-meta">
+    <span class="blog-card-date">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">2024-02-09</span>
+    </span>
+    
+      <a href="/categories/life/" class="blog-card-category">
+        life
+      </a>
+    
   </div>
 
+  <a href="/2024/02/09/%E8%A6%81%E6%8B%92%E7%BB%9D%E7%9C%BC%E9%AB%98%E6%89%8B%E4%BD%8E/" class="blog-card-title">
+    要拒绝眼高手低
+  </a>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Docker/" rel="tag">Docker</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/K8s/" rel="tag">K8s</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/LOVE/" rel="tag">LOVE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bilibili/" rel="tag">bilibili</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/buildx/" rel="tag">buildx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/video/" rel="tag">video</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" rel="tag">人月神话</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%94%9F%E9%97%AE%E9%A2%98/" rel="tag">人生问题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%93%88%E8%80%B6%E5%85%8B/" rel="tag">哈耶克</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%89%E6%84%9F/" rel="tag">有感</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" rel="tag">软件工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/" rel="tag">通往奴役之路</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" rel="tag">随园食单</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" rel="tag">项目管理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" rel="tag">项目经理</a></li></ul>
-    </div>
+  <div class="blog-card-excerpt">
+    <p>Make your hands dirty!
+尝试去慢慢做一些practical的事情，会让你减轻许多焦虑感，掌握一技在手，安全感也就自然而然。
+其实我比较羡慕厨师这个行业，一技在手，别人都会夸你“烧得一手好菜”。但是厨子和外界的联系太多了，袁枚有言“凡物各有先天，物性不良，虽易牙烹之，亦无味也”，厨子需要外界提供上好的食材，需要屠夫和菜农，但他们在现代标准化的流程中丧失了其风味，连带影响了上游的...</p>
   </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/K8s/" style="font-size: 10px;">K8s</a> <a href="/tags/LOVE/" style="font-size: 13.33px;">LOVE</a> <a href="/tags/bilibili/" style="font-size: 20px;">bilibili</a> <a href="/tags/buildx/" style="font-size: 10px;">buildx</a> <a href="/tags/video/" style="font-size: 20px;">video</a> <a href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" style="font-size: 16.67px;">人月神话</a> <a href="/tags/%E4%BA%BA%E7%94%9F%E9%97%AE%E9%A2%98/" style="font-size: 10px;">人生问题</a> <a href="/tags/%E5%93%88%E8%80%B6%E5%85%8B/" style="font-size: 10px;">哈耶克</a> <a href="/tags/%E6%9C%89%E6%84%9F/" style="font-size: 10px;">有感</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" style="font-size: 16.67px;">软件工程</a> <a href="/tags/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/" style="font-size: 10px;">通往奴役之路</a> <a href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" style="font-size: 10px;">随园食单</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" style="font-size: 13.33px;">项目管理</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" style="font-size: 10px;">项目经理</a>
+  <div class="blog-card-footer">
+    <div class="blog-card-tags">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-light, #6b7280);">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1 -2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 2.83 0v0z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      </svg>
+      
+        
+          <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" class="blog-card-tag">
+            #软件工程
+          </a>
+        
+          <a href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" class="blog-card-tag">
+            #随园食单
+          </a>
+        
+      
     </div>
+
+    <button class="blog-card-share" onclick="sharePost('要拒绝眼高手低', '/2024/02/09/%E8%A6%81%E6%8B%92%E7%BB%9D%E7%9C%BC%E9%AB%98%E6%89%8B%E4%BD%8E/')" aria-label="分享文章">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">分享</span>
+    </button>
+  </div>
+</article>
+
+        
+          
+<article class="blog-card" data-animate>
+  <div class="blog-card-meta">
+    <span class="blog-card-date">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">2024-02-06</span>
+    </span>
+    
+      <a href="/categories/book/" class="blog-card-category">
+        book
+      </a>
+    
   </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">十月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">六月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">一月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/08/">八月 2023</a></li></ul>
-    </div>
+  <a href="/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/" class="blog-card-title">
+    现存项目里加人是一场豪赌
+  </a>
+
+  <div class="blog-card-excerpt">
+    <p>带语气视频版：https://www.bilibili.com/video/BV1ut421a7r1/
+
+ 
+
+
+副标题：谈软工圣经《人月神话》
+我的专业是软件工程，顾名思义，软件和土木之类的相似，也是一个系统性的工程，系统就不免牵扯到人、机、料、法、环的方方面面，其中占据主导因素的就是参与项目的人。
+软件工程，研究的便是如何将「软件项目」以标准化「工程项目」的方式去运作，即，尽量剥离掉人的主观能...</p>
   </div>
 
+  <div class="blog-card-footer">
+    <div class="blog-card-tags">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-light, #6b7280);">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1 -2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 2.83 0v0z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      </svg>
+      
+        
+          <a href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" class="blog-card-tag">
+            #人月神话
+          </a>
+        
+          <a href="/tags/bilibili/" class="blog-card-tag">
+            #bilibili
+          </a>
+        
+          <a href="/tags/video/" class="blog-card-tag">
+            #video
+          </a>
+        
+          <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="blog-card-tag">
+            #项目管理
+          </a>
+        
+          <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" class="blog-card-tag">
+            #软件工程
+          </a>
+        
+      
+    </div>
 
+    <button class="blog-card-share" onclick="sharePost('现存项目里加人是一场豪赌', '/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/')" aria-label="分享文章">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">分享</span>
+    </button>
+  </div>
+</article>
+
+        
+          
+<article class="blog-card" data-animate>
+  <div class="blog-card-meta">
+    <span class="blog-card-date">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">2024-01-14</span>
+    </span>
+    
+      <a href="/categories/life/" class="blog-card-category">
+        life
+      </a>
+    
+  </div>
+
+  <a href="/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/" class="blog-card-title">
+    个人能力和个人资源哪个更重要？论“关系户”的合理性
+  </a>
+
+  <div class="blog-card-excerpt">
+    <p>带语气视频版：https://www.bilibili.com/video/BV1vt4y1R7gF/
+
+ 
+
+
+讨论：&amp;#x2F;t&amp;#x2F;1008613#reply38
+这个话题其实开始于大概三年前的一次讨论，当时我身为学校实验室的负责人，在忙活一年一度的招新工作。大致介绍下我们实验室的情况，说是实验室，其实更偏向因兴趣结合，有导师带队的项目工作坊，在机器人竞赛方面有着深厚的经验积累和历年...</p>
+  </div>
+
+  <div class="blog-card-footer">
+    <div class="blog-card-tags">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-light, #6b7280);">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1 -2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 2.83 0v0z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      </svg>
+      
+        
+          <a href="/tags/bilibili/" class="blog-card-tag">
+            #bilibili
+          </a>
+        
+          <a href="/tags/video/" class="blog-card-tag">
+            #video
+          </a>
+        
+      
+    </div>
+
+    <button class="blog-card-share" onclick="sharePost('个人能力和个人资源哪个更重要？论“关系户”的合理性', '/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/')" aria-label="分享文章">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">分享</span>
+    </button>
+  </div>
+</article>
+
+        
+          
+<article class="blog-card" data-animate>
+  <div class="blog-card-meta">
+    <span class="blog-card-date">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">2023-08-20</span>
+    </span>
+    
+      <a href="/categories/tech/" class="blog-card-category">
+        tech
+      </a>
+    
+  </div>
+
+  <a href="/2023/08/20/%E5%88%86%E4%BA%AB%EF%BC%9A%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%9E%84/" class="blog-card-title">
+    分享: 第四次博客重构
+  </a>
+
+  <div class="blog-card-excerpt">
+    <p>视频介绍版：https://www.bilibili.com/video/BV1r14y1i71f/
+
+ 
+
+
+背景断断续续博客也重构了四次了
+博客园：https://www.cnblogs.com/licsber
+语雀：https://www.yuque.com/licsber/blog
+目前自建：https://licsber.site
+灾备：https://blog.licsber.site...</p>
+  </div>
+
+  <div class="blog-card-footer">
+    <div class="blog-card-tags">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-light, #6b7280);">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1 -2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 2.83 0v0z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      </svg>
+      
+        
+          <a href="/tags/bilibili/" class="blog-card-tag">
+            #bilibili
+          </a>
+        
+          <a href="/tags/video/" class="blog-card-tag">
+            #video
+          </a>
+        
+          <a href="/tags/K8s/" class="blog-card-tag">
+            #K8s
+          </a>
+        
+          <a href="/tags/Hexo/" class="blog-card-tag">
+            #Hexo
+          </a>
+        
+      
+    </div>
+
+    <button class="blog-card-share" onclick="sharePost('分享: 第四次博客重构', '/2023/08/20/%E5%88%86%E4%BA%AB%EF%BC%9A%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%9E%84/')" aria-label="分享文章">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">分享</span>
+    </button>
+  </div>
+</article>
+
+        
+          
+<article class="blog-card" data-animate>
+  <div class="blog-card-meta">
+    <span class="blog-card-date">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+        <line x1="16" y1="2" x2="16" y2="6"></line>
+        <line x1="8" y1="2" x2="8" y2="6"></line>
+        <line x1="3" y1="10" x2="21" y2="10"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">2023-08-14</span>
+    </span>
+    
+      <a href="/categories/life/" class="blog-card-category">
+        life
+      </a>
+    
+  </div>
+
+  <a href="/2023/08/14/%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92/" class="blog-card-title">
+    知识的诅咒
+  </a>
+
+  <div class="blog-card-excerpt">
+    <p>知识的诅咒，简单来说就是一旦你掌握了某种知识，就很难站在没掌握这个知识的角度，去思考和理解他人。
+这种信息不对称往往很难意识到，同样也没有银弹，最近几天的深入学习使我深刻地理解了它的意义，在我的知识领域，明白了为什么对于编程的初学者来说，即使是偏向口语化的代码看起来也像天书。
+
+如上图，以程序员懒得去写的猜数游戏为例，规则很简单，代码生成一个随机数，用户不断输入猜测，代码则提示用户输入的数比生成的...</p>
+  </div>
+
+  <div class="blog-card-footer">
+    <div class="blog-card-tags">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-light, #6b7280);">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1 -2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 2.83 0v0z"></path>
+        <line x1="7" y1="7" x2="7.01" y2="7"></line>
+      </svg>
+      
+        
+          <a href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" class="blog-card-tag">
+            #人月神话
+          </a>
+        
+          <a href="/tags/LOVE/" class="blog-card-tag">
+            #LOVE
+          </a>
+        
+      
+    </div>
+
+    <button class="blog-card-share" onclick="sharePost('知识的诅咒', '/2023/08/14/%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92/')" aria-label="分享文章">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+      </svg>
+      <span style="margin-left: var(--spacing-xs, 0.25rem);">分享</span>
+    </button>
+  </div>
+</article>
+
+        
+      </div>
+
+      <!-- Pagination -->
+      
+
+
+
+
+
+
+
+
+
+
+
+<nav class="pagination" aria-label="分页导航" data-animate>
+  <!-- Previous Button -->
+  
+    <a href="/" class="pagination-item" aria-label="上一页">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </a>
+  
+
+  <!-- Page Numbers -->
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
+      
+        <a href="/" class="pagination-item">1</a>
+      
+    
+  
+    
+      
+        <span class="pagination-item active" aria-current="page">2</span>
+      
+    
+  
+    
+      
+        <a href="/page/3/" class="pagination-item">3</a>
+      
+    
+  
+
+  <!-- Next Button -->
+  
+    <a href="/page/3/" class="pagination-item" aria-label="下一页">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </a>
+  
+</nav>
+
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sticky-sidebar">
+      <aside class="sidebar">
+  
+  
+
+  <!-- Profile -->
+  
+    <div class="sidebar-section sidebar-profile" data-animate data-delay="0s">
+      
+        <div class="sidebar-avatar">
+          <img src="https://avatars.githubusercontent.com/licsber" alt="licsber">
+        </div>
+      
+      
+        <p class="sidebar-bio">软件工程师 / 开源爱好者</p>
+      
+    </div>
+  
+
+  <!-- Categories -->
+  
+    <div class="sidebar-section" data-animate data-delay="0.1s">
+      <h3 class="sidebar-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+        </svg>
+        分类
+      </h3>
+      <ul class="sidebar-list">
         
-          <li>
-            <a href="/2024/10/16/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF%EF%BC%88%E4%B8%80%EF%BC%89/">通往奴役之路（一）</a>
+          <li class="sidebar-list-item">
+            <a href="/categories/my/">
+              <span>my</span>
+              <span class="count">1</span>
+            </a>
           </li>
         
-          <li>
-            <a href="/2024/06/30/%E4%BD%95%E4%B8%BA%E7%88%B1%E6%83%85/">何为爱情</a>
+          <li class="sidebar-list-item">
+            <a href="/categories/life/">
+              <span>life</span>
+              <span class="count">5</span>
+            </a>
           </li>
         
-          <li>
-            <a href="/2024/03/29/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D%E7%9A%84%E5%9B%B0%E5%A2%83/">人月神话的困境：项目经理的挑战与转变</a>
+          <li class="sidebar-list-item">
+            <a href="/categories/tech/">
+              <span>tech</span>
+              <span class="count">2</span>
+            </a>
           </li>
         
-          <li>
-            <a href="/2024/02/20/%E8%8A%B1%E5%BC%80%E5%A0%AA%E6%8A%98%E7%9B%B4%E9%A1%BB%E6%8A%98/">花开堪折直须折</a>
-          </li>
-        
-          <li>
-            <a href="/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/">Docker使用buildx来取代传统build并同时构建多架构镜像</a>
+          <li class="sidebar-list-item">
+            <a href="/categories/book/">
+              <span>book</span>
+              <span class="count">3</span>
+            </a>
           </li>
         
       </ul>
     </div>
-  </div>
-
   
-</aside>
+
+  <!-- Tag Cloud -->
+  
+    
+    
+    
+    <div class="sidebar-section" data-animate data-delay="0.3s">
+      <h3 class="sidebar-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        标签云
+      </h3>
+      <div class="tag-cloud">
+        
+          <a href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" class="tag-cloud-item lg">
+            人月神话
+          </a>
+        
+          <a href="/tags/LOVE/" class="tag-cloud-item md">
+            LOVE
+          </a>
+        
+          <a href="/tags/bilibili/" class="tag-cloud-item xl">
+            bilibili
+          </a>
+        
+          <a href="/tags/video/" class="tag-cloud-item xl">
+            video
+          </a>
+        
+          <a href="/tags/K8s/" class="tag-cloud-item sm">
+            K8s
+          </a>
+        
+          <a href="/tags/Hexo/" class="tag-cloud-item sm">
+            Hexo
+          </a>
+        
+          <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="tag-cloud-item md">
+            项目管理
+          </a>
+        
+          <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" class="tag-cloud-item lg">
+            软件工程
+          </a>
+        
+          <a href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" class="tag-cloud-item sm">
+            随园食单
+          </a>
+        
+          <a href="/tags/Docker/" class="tag-cloud-item sm">
+            Docker
+          </a>
+        
+          <a href="/tags/buildx/" class="tag-cloud-item sm">
+            buildx
+          </a>
+        
+          <a href="/tags/%E6%9C%89%E6%84%9F/" class="tag-cloud-item sm">
+            有感
+          </a>
+        
+          <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" class="tag-cloud-item sm">
+            项目经理
+          </a>
+        
+          <a href="/tags/%E4%BA%BA%E7%94%9F%E9%97%AE%E9%A2%98/" class="tag-cloud-item sm">
+            人生问题
+          </a>
+        
+          <a href="/tags/%E5%93%88%E8%80%B6%E5%85%8B/" class="tag-cloud-item sm">
+            哈耶克
+          </a>
+        
+          <a href="/tags/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/" class="tag-cloud-item sm">
+            通往奴役之路
+          </a>
         
       </div>
-      <footer id="footer">
+    </div>
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
+
+  <!-- Archives -->
+  
+
+  <!-- Recent Posts -->
+  
+    <div class="sidebar-section" data-animate data-delay="0.5s">
+      <h3 class="sidebar-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        最新文章
+      </h3>
+      <ul class="sidebar-list">
+        
+          
+            <li class="sidebar-list-item">
+              <a href="/2023/08/08/licsber%E8%8B%B1%E6%96%87%E5%90%8D%E7%9A%84%E7%94%B1%E6%9D%A5/" title="licsber英文名的由来">
+                <span>licsber英文名的由来</span>
+              </a>
+            </li>
+          
+            <li class="sidebar-list-item">
+              <a href="/2023/08/14/%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92/" title="知识的诅咒">
+                <span>知识的诅咒</span>
+              </a>
+            </li>
+          
+            <li class="sidebar-list-item">
+              <a href="/2023/08/20/%E5%88%86%E4%BA%AB%EF%BC%9A%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%9E%84/" title="分享: 第四次博客重构">
+                <span>分享: 第四次博客重构</span>
+              </a>
+            </li>
+          
+            <li class="sidebar-list-item">
+              <a href="/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/" title="个人能力和个人资源哪个更重要？论“关系户”的合理性">
+                <span>个人能力和个人资源哪个更重要？论“关系户...</span>
+              </a>
+            </li>
+          
+            <li class="sidebar-list-item">
+              <a href="/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/" title="现存项目里加人是一场豪赌">
+                <span>现存项目里加人是一场豪赌</span>
+              </a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+</aside>
+
+    </div>
+  </div>
+</main>
+
+
+    <!-- Footer -->
+    
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <span class="footer-brand-name">LicsberBlog</span>
+      <span class="footer-brand-desc">licsber滴个人博客 望赛博永生(</span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="footer-links">
       
-        <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备20005684号</a>
+        <a href="/" class="footer-link">
+          首页
+        </a>
+      
+        <a href="/archives/" class="footer-link">
+          归档
+        </a>
+      
+        <a href="/friends/" class="footer-link">
+          友链
+        </a>
+      
+        <a href="/timeline/" class="footer-link">
+          时间线
+        </a>
+      
+        <a href="/about/" class="footer-link">
+          关于
+        </a>
+      
+    </nav>
+
+    <div class="footer-divider"></div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      
+        <p style="margin-bottom: var(--spacing-xs);">
+          <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备20005684号</a>
 <script>
   var _hmt = _hmt || [];
   (function() {
@@ -370,46 +896,267 @@
     s.parentNode.insertBefore(hm, s);
   })();
 </script>
+        </p>
       
-      &copy; 2026 licsber<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+      <p>
+        &copy; 2026 licsber
+      </p>
+      <p style="margin-top: var(--spacing-xs);">
+        Powered by <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+      </p>
     </div>
   </div>
 </footer>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/friends" class="mobile-nav-link">Friends</a>
-  
-    <a href="/counting_time" class="mobile-nav-link">Timeline</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-</nav>
+
+    <!-- Back to Top Button -->
     
+<button class="back-to-top" id="back-to-top" aria-label="返回顶部">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
 
 
-<script src="/js/jquery-3.6.4.min.js"></script>
 
+    <!-- Scripts -->
+    <script>
+(function() {
+  'use strict';
 
+  // Configuration
+  const config = {
+    navbarThreshold: 50,
+    backToTopThreshold: 400,
+    scrollProgressEnabled: true,
+    backToTopEnabled: true
+  };
 
+  // Scroll Progress Bar
+  if (config.scrollProgressEnabled) {
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+      window.addEventListener('scroll', function() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        scrollProgress.style.width = progress + '%';
+      }, { passive: true });
+    }
+  }
+
+  // Navbar Scroll Effect
+  const navbar = document.getElementById('navbar');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+  if (navbar) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > config.navbarThreshold) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  }
 
+  // Mobile Menu Toggle
+  const navLinksMobile = document.getElementById('nav-links-mobile');
+  
+  if (mobileMenuBtn && navLinksMobile) {
+    let isMenuOpen = false;
+    const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
+    const closeIcon = mobileMenuBtn.querySelector('.close-icon');
 
+    mobileMenuBtn.addEventListener('click', function() {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        navLinksMobile.classList.add('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        if (menuIcon) menuIcon.style.display = 'none';
+        if (closeIcon) closeIcon.style.display = 'block';
+      } else {
+        navLinksMobile.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      }
+    });
 
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (navbar && !navbar.contains(e.target) && isMenuOpen) {
+        isMenuOpen = false;
+        navLinksMobile.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      }
+    });
 
-<script src="/js/script.js"></script>
+    // Close menu when clicking a link
+    navLinksMobile.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        isMenuOpen = false;
+        navLinksMobile.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      });
+    });
 
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isMenuOpen) {
+        isMenuOpen = false;
+        navLinksMobile.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      }
+    });
+  }
 
+  // Back to Top Button
+  if (config.backToTopEnabled) {
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
 
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > config.backToTopThreshold) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }, { passive: true });
+    }
+  }
 
+  // Hero Mouse Parallax Effect
+  const hero = document.getElementById('hero');
+  if (hero) {
+    const heroBg = hero.querySelector('.hero-bg');
+    if (heroBg) {
+      let animationFrame;
+      let currentX = 0;
+      let currentY = 0;
+      let targetX = 0;
+      let targetY = 0;
 
-  </div>
-</body>
+      hero.addEventListener('mousemove', function(e) {
+        const rect = hero.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        targetX = x * 20;
+        targetY = y * 20;
+      });
+
+      hero.addEventListener('mouseleave', function() {
+        targetX = 0;
+        targetY = 0;
+      });
+
+      function animate() {
+        currentX += (targetX - currentX) * 0.1;
+        currentY += (targetY - currentY) * 0.1;
+        heroBg.style.transform = 'scale(1.1) translate(' + currentX + 'px, ' + currentY + 'px)';
+
+        if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
+          animationFrame = requestAnimationFrame(animate);
+        }
+      }
+
+      animate();
+    }
+  }
+
+  // Intersection Observer for Scroll Animations
+  if ('IntersectionObserver' in window) {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          const delay = element.getAttribute('data-delay') || '0s';
+          element.style.transitionDelay = delay;
+          element.classList.add('visible', 'animate-in');
+          
+          setTimeout(function() {
+            observer.unobserve(element);
+          }, parseFloat(delay) * 1000 + 600);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-animate]').forEach(function(element) {
+      observer.observe(element);
+    });
+  } else {
+    // Fallback for browsers without IntersectionObserver
+    document.querySelectorAll('[data-animate]').forEach(function(element) {
+      element.classList.add('visible', 'animate-in');
+    });
+  }
+
+  // Share Post Function
+  window.sharePost = function(title, path) {
+    const url = window.location.origin + path;
+    if (navigator.share) {
+      navigator.share({
+        title: title,
+        url: url
+      }).catch(function(err) {
+        console.error('Share failed:', err);
+        navigator.clipboard.writeText(url).then(function() {
+          alert('链接已复制到剪贴板');
+        }).catch(function() {
+          alert('复制失败，请手动复制链接');
+        });
+      });
+    } else {
+      navigator.clipboard.writeText(url).then(function() {
+        alert('链接已复制到剪贴板');
+      }).catch(function() {
+        alert('复制失败，请手动复制链接');
+      });
+    }
+  };
+
+  // Smooth scroll to element (for anchor links)
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const href = anchor.getAttribute('href');
+      if (href === '#') {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } else if (href.length > 1) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const offset = navbar ? navbar.offsetHeight : 0;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset - 20;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+
+})();
+</script>
+
+  </body>
 </html>
