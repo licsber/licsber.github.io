@@ -839,11 +839,12 @@
 }
 .post-content ul li {
   position: relative;
+  padding-left: 1rem;
 }
 .post-content ul li::before {
   content: '';
   position: absolute;
-  left: -$space-6;
+  left: 0;
   top: 0.6em;
   width: 8px;
   height: 8px;
@@ -853,6 +854,10 @@
 }
 .post-content ol {
   list-style: decimal;
+  padding-left: 2.5rem;
+}
+.post-content ol li {
+  padding-left: 0.5rem;
 }
 .post-content li {
   margin-bottom: 0.5rem;
