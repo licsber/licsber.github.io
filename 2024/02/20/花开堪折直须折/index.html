@@ -282,21 +282,60 @@
 
   <section class="post-comments" data-animate>
     <h2 class="post-comments-title">评论</h2>
-    <script src="https://giscus.app/client.js"
+    <div
+      class="giscus-shell"
       data-repo="licsber/licsber.github.io"
       data-repo-id="MDEwOlJlcG9zaXRvcnkyNDc0NzQyMjY="
       data-category="Announcements"
       data-category-id="DIC_kwDODsAoMs4DANcU"
-      data-mapping="pathname"
+      data-mapping="og:title"
       data-strict="0"
       data-reactions-enabled="1"
       data-emit-metadata="0"
       data-input-position="top"
-      data-theme="preferred_color_scheme"
+      data-theme="transparent_dark"
       data-lang="zh-CN"
-      data-loading="lazy"
-      crossorigin="anonymous"
-      async>
+      data-loading="lazy">
+    </div>
+    <script>
+      (function() {
+        const shell = document.currentScript.previousElementSibling;
+        const hostname = window.location.hostname;
+        const localHosts = ['localhost', '127.0.0.1', '::1'];
+
+        if (localHosts.includes(hostname) || hostname.endsWith('.local')) {
+          shell.innerHTML = '<p class="giscus-local-note">本地预览已跳过评论加载，避免创建测试 Discussion。</p>';
+          return;
+        }
+
+        const giscusScript = document.createElement('script');
+        giscusScript.src = 'https://giscus.app/client.js';
+        giscusScript.async = true;
+        giscusScript.crossOrigin = 'anonymous';
+
+        [
+          'repo',
+          'repoId',
+          'category',
+          'categoryId',
+          'mapping',
+          'strict',
+          'reactionsEnabled',
+          'emitMetadata',
+          'inputPosition',
+          'theme',
+          'lang',
+          'loading'
+        ].forEach(function(key) {
+          const value = shell.dataset[key];
+          if (!value) return;
+          giscusScript.setAttribute('data-' + key.replace(/[A-Z]/g, function(letter) {
+            return '-' + letter.toLowerCase();
+          }), value);
+        });
+
+        shell.appendChild(giscusScript);
+      })();
     </script>
   </section>
 
