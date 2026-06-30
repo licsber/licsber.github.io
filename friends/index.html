@@ -233,7 +233,7 @@
         <h1 class="post-title">友情链接</h1>
       </header>
       <div class="post-content">
-        <p>友链交换：<a href="mailto:&#x61;&#x64;&#109;&#105;&#x6e;&#64;&#108;&#105;&#99;&#115;&#x62;&#101;&#x72;&#46;&#115;&#x69;&#x74;&#x65;">admin@licsber.site</a></p>
+        <p>友链交换：<a href="mailto:&#97;&#x64;&#x6d;&#x69;&#110;&#64;&#x6c;&#105;&#99;&#115;&#x62;&#x65;&#x72;&#46;&#115;&#x69;&#116;&#101;">admin@licsber.site</a></p>
 <h2 id="单方面友链"><a href="#单方面友链" class="headerlink" title="单方面友链"></a>单方面友链</h2><blockquote>
 <p>分享我在互联网上的发现~<br>“在互联网上淘金”<br>很抱歉的是 如果您的博客有广告 那可能会被从这里删除</p>
 </blockquote>
@@ -268,6 +268,76 @@
 <p>三维点云处理入门（存在侧边广告）<br><a target="_blank" rel="noopener" href="https://www.52txr.cn/">https://www.52txr.cn</a></p>
 
       </div>
+      
+
+
+  <section class="post-comments" data-animate>
+    <h2 class="post-comments-title">评论</h2>
+    <div
+      id="giscus-comments"
+      class="giscus-shell"
+      data-repo="licsber/licsber.github.io"
+      data-repo-id="MDEwOlJlcG9zaXRvcnkyNDc0NzQyMjY="
+      data-category="Announcements"
+      data-category-id="DIC_kwDODsAoMs4DANcU"
+      data-mapping="specific"
+      
+      data-term="friends/友情链接"
+      
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="transparent_dark"
+      data-lang="zh-CN"
+      data-loading="lazy">
+    </div>
+    <script>
+      (function() {
+        const shell = document.getElementById('giscus-comments');
+        if (!shell) return;
+
+        const hostname = window.location.hostname;
+        const localHosts = ['localhost', '127.0.0.1', '::1', '[::1]'];
+
+        if (localHosts.includes(hostname) || hostname.endsWith('.local')) {
+          shell.innerHTML = '<p class="giscus-local-note">本地预览已跳过评论加载，避免创建测试 Discussion。</p>';
+          return;
+        }
+
+        const giscusScript = document.createElement('script');
+        giscusScript.src = 'https://giscus.app/client.js';
+        giscusScript.async = true;
+        giscusScript.crossOrigin = 'anonymous';
+
+        [
+          'repo',
+          'repoId',
+          'category',
+          'categoryId',
+          'mapping',
+          'term',
+          'strict',
+          'reactionsEnabled',
+          'emitMetadata',
+          'inputPosition',
+          'theme',
+          'lang',
+          'loading'
+        ].forEach(function(key) {
+          const value = shell.dataset[key];
+          if (!value) return;
+          giscusScript.setAttribute('data-' + key.replace(/[A-Z]/g, function(letter) {
+            return '-' + letter.toLowerCase();
+          }), value);
+        });
+
+        shell.appendChild(giscusScript);
+      })();
+    </script>
+  </section>
+
+
     </article>
 
     <!-- Sidebar -->

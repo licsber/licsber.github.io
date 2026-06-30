@@ -288,6 +288,76 @@
 </tbody></table>
 
       </div>
+      
+
+
+  <section class="post-comments" data-animate>
+    <h2 class="post-comments-title">评论</h2>
+    <div
+      id="giscus-comments"
+      class="giscus-shell"
+      data-repo="licsber/licsber.github.io"
+      data-repo-id="MDEwOlJlcG9zaXRvcnkyNDc0NzQyMjY="
+      data-category="Announcements"
+      data-category-id="DIC_kwDODsAoMs4DANcU"
+      data-mapping="specific"
+      
+      data-term="about/关于我"
+      
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="transparent_dark"
+      data-lang="zh-CN"
+      data-loading="lazy">
+    </div>
+    <script>
+      (function() {
+        const shell = document.getElementById('giscus-comments');
+        if (!shell) return;
+
+        const hostname = window.location.hostname;
+        const localHosts = ['localhost', '127.0.0.1', '::1', '[::1]'];
+
+        if (localHosts.includes(hostname) || hostname.endsWith('.local')) {
+          shell.innerHTML = '<p class="giscus-local-note">本地预览已跳过评论加载，避免创建测试 Discussion。</p>';
+          return;
+        }
+
+        const giscusScript = document.createElement('script');
+        giscusScript.src = 'https://giscus.app/client.js';
+        giscusScript.async = true;
+        giscusScript.crossOrigin = 'anonymous';
+
+        [
+          'repo',
+          'repoId',
+          'category',
+          'categoryId',
+          'mapping',
+          'term',
+          'strict',
+          'reactionsEnabled',
+          'emitMetadata',
+          'inputPosition',
+          'theme',
+          'lang',
+          'loading'
+        ].forEach(function(key) {
+          const value = shell.dataset[key];
+          if (!value) return;
+          giscusScript.setAttribute('data-' + key.replace(/[A-Z]/g, function(letter) {
+            return '-' + letter.toLowerCase();
+          }), value);
+        });
+
+        shell.appendChild(giscusScript);
+      })();
+    </script>
+  </section>
+
+
     </article>
 
     <!-- Sidebar -->
