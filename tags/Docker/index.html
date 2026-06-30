@@ -10,14 +10,17 @@
 <meta name="theme-color" content="#DFFF00">
 
 
+
   <title>LicsberBlog | 来人间一场</title>
 
+
+<link rel="canonical" href="https://licsber.site/tags/Docker/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="LicsberBlog">
 <meta property="og:description" content="licsber滴个人博客 望赛博永生(">
-<meta property="og:url" content="https://licsber.site/tags/Docker/index.html">
+<meta property="og:url" content="https://licsber.site/tags/Docker/">
 <meta property="og:site_name" content="LicsberBlog">
 
 <meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&amp;q=80">
@@ -262,7 +265,7 @@
     
   </div>
 
-  <a href="/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/" class="blog-card-title">
+  <a href="/posts/2024/02/12/" class="blog-card-title">
     Docker使用buildx来取代传统build并同时构建多架构镜像
   </a>
 
@@ -285,7 +288,7 @@
       
     </div>
 
-    <button class="blog-card-share" onclick="sharePost('Docker使用buildx来取代传统build并同时构建多架构镜像', '/2024/02/12/Docker%E4%BD%BF%E7%94%A8buildx%E6%9D%A5%E5%8F%96%E4%BB%A3%E4%BC%A0%E7%BB%9Fbuild%E5%B9%B6%E5%90%8C%E6%97%B6%E6%9E%84%E5%BB%BA%E5%A4%9A%E6%9E%B6%E6%9E%84%E9%95%9C%E5%83%8F/')" aria-label="分享文章">
+    <button class="blog-card-share" onclick="sharePost(&#34;Docker使用buildx来取代传统build并同时构建多架构镜像&#34;, &#34;https://licsber.site/posts/2024/02/12/&#34;)" aria-label="分享文章">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="18" cy="5" r="3"></circle>
         <circle cx="6" cy="12" r="3"></circle>
@@ -447,31 +450,31 @@
         
           
             <li class="sidebar-list-item">
-              <a href="/2023/08/08/licsber%E8%8B%B1%E6%96%87%E5%90%8D%E7%9A%84%E7%94%B1%E6%9D%A5/" title="licsber英文名的由来">
+              <a href="/posts/2023/08/08/" title="licsber英文名的由来">
                 <span>licsber英文名的由来</span>
               </a>
             </li>
           
             <li class="sidebar-list-item">
-              <a href="/2023/08/14/%E7%9F%A5%E8%AF%86%E7%9A%84%E8%AF%85%E5%92%92/" title="知识的诅咒">
+              <a href="/posts/2023/08/14/" title="知识的诅咒">
                 <span>知识的诅咒</span>
               </a>
             </li>
           
             <li class="sidebar-list-item">
-              <a href="/2023/08/20/%E7%AC%AC%E5%9B%9B%E6%AC%A1%E5%8D%9A%E5%AE%A2%E9%87%8D%E6%9E%84/" title="第四次博客重构">
+              <a href="/posts/2023/08/20/" title="第四次博客重构">
                 <span>第四次博客重构</span>
               </a>
             </li>
           
             <li class="sidebar-list-item">
-              <a href="/2024/01/14/%E4%B8%AA%E4%BA%BA%E8%83%BD%E5%8A%9B%E5%92%8C%E4%B8%AA%E4%BA%BA%E8%B5%84%E6%BA%90%E5%93%AA%E4%B8%AA%E6%9B%B4%E9%87%8D%E8%A6%81%EF%BC%9F%E8%AE%BA%E2%80%9C%E5%85%B3%E7%B3%BB%E6%88%B7%E2%80%9D%E7%9A%84%E5%90%88%E7%90%86%E6%80%A7/" title="个人能力和个人资源哪个更重要？论&#34;关系户&#34;的合理性">
+              <a href="/posts/2024/01/14/" title="个人能力和个人资源哪个更重要？论&#34;关系户&#34;的合理性">
                 <span>个人能力和个人资源哪个更重要？论&#34;关系户...</span>
               </a>
             </li>
           
             <li class="sidebar-list-item">
-              <a href="/2024/02/06/%E7%8E%B0%E5%AD%98%E9%A1%B9%E7%9B%AE%E9%87%8C%E5%8A%A0%E4%BA%BA%E6%98%AF%E4%B8%80%E5%9C%BA%E8%B1%AA%E8%B5%8C/" title="现存项目里加人是一场豪赌">
+              <a href="/posts/2024/02/06/" title="现存项目里加人是一场豪赌">
                 <span>现存项目里加人是一场豪赌</span>
               </a>
             </li>
@@ -746,22 +749,22 @@
   }
 
   // Share Post Function
-  window.sharePost = function(title, path) {
-    const url = window.location.origin + path;
+  window.sharePost = function(title, url) {
+    const shareUrl = new URL(url, window.location.origin).href;
     if (navigator.share) {
       navigator.share({
         title: title,
-        url: url
+        url: shareUrl
       }).catch(function(err) {
         console.error('Share failed:', err);
-        navigator.clipboard.writeText(url).then(function() {
+        navigator.clipboard.writeText(shareUrl).then(function() {
           alert('链接已复制到剪贴板');
         }).catch(function() {
           alert('复制失败，请手动复制链接');
         });
       });
     } else {
-      navigator.clipboard.writeText(url).then(function() {
+      navigator.clipboard.writeText(shareUrl).then(function() {
         alert('链接已复制到剪贴板');
       }).catch(function() {
         alert('复制失败，请手动复制链接');
