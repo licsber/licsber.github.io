@@ -285,6 +285,7 @@
   <section class="post-comments" data-animate>
     <h2 class="post-comments-title">评论</h2>
     <div
+      id="giscus-comments"
       class="giscus-shell"
       data-repo="licsber/licsber.github.io"
       data-repo-id="MDEwOlJlcG9zaXRvcnkyNDc0NzQyMjY="
@@ -301,9 +302,11 @@
     </div>
     <script>
       (function() {
-        const shell = document.currentScript.previousElementSibling;
+        const shell = document.getElementById('giscus-comments');
+        if (!shell) return;
+
         const hostname = window.location.hostname;
-        const localHosts = ['localhost', '127.0.0.1', '::1'];
+        const localHosts = ['localhost', '127.0.0.1', '::1', '[::1]'];
 
         if (localHosts.includes(hostname) || hostname.endsWith('.local')) {
           shell.innerHTML = '<p class="giscus-local-note">本地预览已跳过评论加载，避免创建测试 Discussion。</p>';
