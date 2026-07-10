@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="同一套 Codex Skill，创作者看到的是配图、社媒卡片和可编辑 PPT，开发者看到的却是触发规则、工具编排、渲染校验与失败恢复。">
+<meta name="keywords" content="技术宅,生活">
+<meta name="author" content="licsber">
+<meta name="theme-color" content="#DFFF00">
+<title>用 Codex Skill 搭一条内容生产线 - LicsberBlog</title>
+
+<link rel="canonical" href="https://licsber.site/2026/07/03/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="用 Codex Skill 搭一条内容生产线">
+<meta property="og:description" content="同一套 Codex Skill，创作者看到的是配图、社媒卡片和可编辑 PPT，开发者看到的却是触发规则、工具编排、渲染校验与失败恢复。">
+<meta property="og:url" content="https://licsber.site/2026/07/03/">
+<meta property="og:site_name" content="LicsberBlog">
+
+
+<meta property="article:published_time" content="2026-07-03T09:46:03.000Z">
+
+
+
+<meta property="article:author" content="https://github.com/licsber">
+
+
+<meta property="article:section" content="tech">
+
+
+
+<meta property="article:tag" content="Codex">
+
+<meta property="article:tag" content="AI">
+
+<meta property="article:tag" content="Skill">
+
+
+
+
+<meta property="og:image" content="https://licsber.site/assets/posts/codex-skill-content-factory/dual-perspective.webp">
+
+<meta property="og:image:alt" content="创作者与开发者从两侧观察同一套 Codex Skill 内容生产线">
+
+
+<meta property="og:image:width" content="1672">
+
+
+<meta property="og:image:height" content="941">
+
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="用 Codex Skill 搭一条内容生产线">
+<meta name="twitter:description" content="同一套 Codex Skill，创作者看到的是配图、社媒卡片和可编辑 PPT，开发者看到的却是触发规则、工具编排、渲染校验与失败恢复。">
+
+<meta name="twitter:image" content="https://licsber.site/assets/posts/codex-skill-content-factory/dual-perspective.webp">
+
+<meta name="twitter:image:alt" content="创作者与开发者从两侧观察同一套 Codex Skill 内容生产线">
+
+
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<!-- RSS -->
+<link rel="alternate" href="https://licsber.site/atom.xml" title="LicsberBlog" type="application/atom+xml">
+
+<!-- Fonts -->
+<link href="/fonts/inter/inter.css" rel="stylesheet">
+<link href="/fonts/jetbrains-mono/jetbrains-mono.css" rel="stylesheet">
+<link href="/fonts/lxgw-wenkai-screen/lxgwwenkaiscreen.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="/fonts/lxgw-wenkai-screen/lxgwwenkaiscreen.css" rel="stylesheet"></noscript>
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+  <meta name="generator" content="Hexo 8.1.1"></head>
+  <body>
+    <!-- Scroll Progress Bar -->
+    
+<div class="scroll-progress" id="scroll-progress"></div>
+
+
+
+    <!-- Navigation -->
+    
+
+
+<nav class="nav-container" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="/" class="nav-logo">
+        LicsberBlog
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="nav-links-desktop">
+        
+          <a href="/" class="nav-link">
+            首页
+          </a>
+        
+          <a href="/archives/" class="nav-link">
+            归档
+          </a>
+        
+          <a href="/friends/" class="nav-link">
+            友链
+          </a>
+        
+          <a href="/about/" class="nav-link">
+            关于
+          </a>
+        
+
+        <!-- Social Icons -->
+        
+          <a href="https://github.com/licsber" target="_blank" rel="noopener noreferrer" class="nav-link nav-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        
+        
+          <a href="/atom.xml" class="nav-link nav-icon" aria-label="RSS">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11a9 9 0 0 1 9 9"></path>
+              <path d="M4 4a16 16 0 0 1 16 16"></path>
+              <circle cx="5" cy="19" r="1"></circle>
+            </svg>
+          </a>
+        
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="打开菜单">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="menu-icon">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="close-icon" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-links-mobile" id="nav-links-mobile">
+      
+        <a href="/" class="nav-link">
+          首页
+        </a>
+      
+        <a href="/archives/" class="nav-link">
+          归档
+        </a>
+      
+        <a href="/friends/" class="nav-link">
+          友链
+        </a>
+      
+        <a href="/about/" class="nav-link">
+          关于
+        </a>
+      
+      <div class="mobile-social-links">
+        
+          <a href="https://github.com/licsber" target="_blank" rel="noopener noreferrer" class="nav-link nav-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        
+        
+          <a href="/atom.xml" class="nav-link nav-icon" aria-label="RSS">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 11a9 9 0 0 1 9 9"></path>
+              <path d="M4 4a16 16 0 0 1 16 16"></path>
+              <circle cx="5" cy="19" r="1"></circle>
+            </svg>
+          </a>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Main Content -->
+    
+
+
+<section class="hero-section" id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-scan-line"></div>
+  <div class="hero-content">
+    <h1 class="hero-title">
+      <span class="typewriter-text" id="typewriter" data-phrases='["Feel Alive","Stay Hungry & Foolish","Make it Better","LicsberBlog"]'></span>
+      <span class="cursor">_</span>
+    </h1>
+    <p class="hero-subtitle">来人间一场~</p>
+  </div>
+</section>
+
+<script>
+(function() {
+  const typewriter = document.getElementById('typewriter');
+  if (!typewriter) return;
+  
+  const phrases = JSON.parse(typewriter.dataset.phrases || '[""]');
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 100;
+  
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+      typewriter.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      typeSpeed = 50;
+    } else {
+      typewriter.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      typeSpeed = 100;
+    }
+    
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      isDeleting = true;
+      typeSpeed = 2000;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      typeSpeed = 500;
+    }
+    
+    setTimeout(type, typeSpeed);
+  }
+  
+  setTimeout(type, 1000);
+})();
+</script>
+
+
+
+<main class="main-content">
+  <div class="post-layout">
+    <!-- Article Content -->
+    <article class="post-container">
+      <!-- Post Header -->
+      <header class="post-header">
+        <h1 class="post-title">用 Codex Skill 搭一条内容生产线</h1>
+        
+          <p class="post-deck">同一套 Codex Skill，创作者看到的是配图、社媒卡片和可编辑 PPT，开发者看到的却是触发规则、工具编排、渲染校验与失败恢复。</p>
+        
+        <div class="post-meta">
+          <span class="post-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
+            2026-07-03
+          </span>
+          
+            <span class="post-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+              </svg>
+              tech
+            </span>
+          
+          
+            <span class="post-meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1 -2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 2.82 2.82z"></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              3 个标签
+            </span>
+          
+        </div>
+      </header>
+
+      
+        <figure class="post-cover">
+          <img
+            src="/assets/posts/codex-skill-content-factory/dual-perspective.webp"
+            alt="创作者与开发者从两侧观察同一套 Codex Skill 内容生产线"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+            
+              width="1672"
+              height="941"
+            
+          >
+          
+        </figure>
+      
+
+      <!-- Post Body -->
+      <div class="post-content">
+        <p>一篇文章写完，创作者的工作往往才做了一半。</p>
+<p>接下来还要挑配图、裁公众号封面、拆成小红书卡片；碰上汇报，还得再做一版 PPT。每个平台尺寸不同，风格要统一，文字不能溢出，最后的文件最好还能继续改。换一篇文章，又要从头向 AI 解释一遍。</p>
+<p>最近一批 Codex Skill 瞄准的，正是这段反复发生的“发布前收尾”。创作者看到的是一组配图、一套社媒卡片或一个可编辑 PPT；开发者看到的则是被保存下来的规则、模板、脚本、渲染工具和检查流程。</p>
+<p>这篇真正想讨论的不是“又多了几个 AI 项目”，而是同一条内容生产线的两面：它替用户省掉了什么，开发者又为稳定交付搭了什么，以及它离真正的一键内容工厂还有多远。</p>
+<aside class="research-note">
+  <span class="research-note-label">调研边界</span>
+  <p>下面的案例来自公开 README 与仓库结构，核查时间为 2026 年 7 月 10 日，并非我对所有项目做过完整实测。项目描述可以说明它们想解决什么，不能替代真实运行效果。</p>
+</aside>
+
+<h2 id="用户要的不是“AI-会不会画”"><a href="#用户要的不是“AI-会不会画”" class="headerlink" title="用户要的不是“AI 会不会画”"></a>用户要的不是“AI 会不会画”</h2><p>假设我刚写完一篇长文，对 Codex 说：</p>
+<blockquote>
+<p>按我平时的风格，做三张正文配图、一张公众号封面，再拆成一组小红书卡片。</p>
+</blockquote>
+<p>从用户视角看，这句话并不复杂。我关心的只有几件事：不用每次重讲审美，几个渠道看起来像同一套作品，文字没有被裁掉，最后拿到的是可以发布或继续修改的文件。</p>
+<p>但开发者听到的是另一串问题：</p>
+<table>
+<thead>
+<tr>
+<th>用户说的话</th>
+<th>真正的验收标准</th>
+<th>开发者要补上的工程合同</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>“按我平时的风格”</td>
+<td>配色、留白、语气和构图稳定</td>
+<td>参考图、模板、禁用项与版本化规则</td>
+</tr>
+<tr>
+<td>“做成一组卡片”</td>
+<td>尺寸正确、信息连续、顺序可读</td>
+<td>平台规格、内容拆分、版式选择与批量渲染</td>
+</tr>
+<tr>
+<td>“不要有文字溢出”</td>
+<td>手机端预览没有裁切和遮挡</td>
+<td>DOM 检查、截图对比或人工确认门</td>
+</tr>
+<tr>
+<td>“给我一个 PPT”</td>
+<td>标题能改、图形能挪，不是一张大截图</td>
+<td>对象级重建、重新渲染和文件打开验证</td>
+</tr>
+<tr>
+<td>“以后都这样做”</td>
+<td>新任务不必重发整套规则</td>
+<td>可安装、可版本化、能再次读取的工作流</td>
+</tr>
+</tbody></table>
+<p>这正是普通聊天和 Skill 开始拉开差距的地方。好 prompt 当然也能调用工具，轻量 Skill 也可能只有一份说明；区别不在于名字，而在于有没有把复用、工具顺序、失败条件和交付格式一起保存下来。</p>
+<h2 id="开发者搭的不是一个更长的-prompt"><a href="#开发者搭的不是一个更长的-prompt" class="headerlink" title="开发者搭的不是一个更长的 prompt"></a>开发者搭的不是一个更长的 prompt</h2><p>从 <a target="_blank" rel="noopener" href="https://developers.openai.com/codex/concepts/customization/#skills">Codex 的自定义机制</a> 来看，Skill 更接近一个可复用工作流。一个典型目录可能长这样：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">social-card-skill/</span><br><span class="line">├── SKILL.md       # 适用场景、步骤、停止条件和交付物</span><br><span class="line">├── references/    # 平台尺寸、版式规则、质量标准</span><br><span class="line">├── scripts/       # 渲染、转换、校验等确定性操作</span><br><span class="line">└── assets/        # 模板、样例和视觉基线</span><br></pre></td></tr></table></figure>
+
+<p><code>SKILL.md</code> 是入口：名称和描述帮助 Codex 判断什么时候该用它，正文规定先读什么、做什么、哪里必须停下来确认。细节资料不必全塞进上下文，可以在需要时再读；确定性的转换交给脚本；模板和样例则作为稳定起点。</p>
+<p>这也意味着 Skill 本身不会凭空获得新能力。它不能凭一份说明变出 Playwright、图像模型或 PowerPoint 运行时，而是规定如何使用当前环境里已有的工具。环境没有装依赖、没有权限或没有对应模型，生产线照样会停。</p>
+<p>所以 Skill 也不是“记住上次对话”。更准确的说法是：它把规则写进文件并版本化，让下一次新任务可以重新读取，而不用用户再手动粘贴整套要求。</p>
+<h2 id="第一条生产线：把文章变成发布包"><a href="#第一条生产线：把文章变成发布包" class="headerlink" title="第一条生产线：把文章变成发布包"></a>第一条生产线：把文章变成发布包</h2><p>内容创作者最容易感知的，是从文章到配图和社媒卡片这一段。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/helloianneo/ian-xiaohei-illustrations"><code>ian-xiaohei-illustrations</code></a> 的目标，是把中文文章里的判断、流程、结构和隐喻，转成统一的小黑 IP、16:9 白底手绘正文图。对用户来说，价值不是“偶尔生成一张好看的图”，而是下一篇文章还能沿用相同的留白、线条和批注方式。</p>
+<p>开发者视角则完全不同。要稳定复用这种风格，需要先从文章里挑出值得可视化的句子，再约束构图、颜色、文字量和禁止项；生成后还要检查画面是不是在解释观点，而不是只做装饰。所谓“风格一致”，实际是参考素材、规则和人工判断共同作用的结果，不是模型天然记住了审美。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/op7418/guizang-social-card-skill"><code>guizang-social-card-skill</code></a> 把链路又往前推了一步。它面向小红书图文、公众号封面和 Live Photo，公开规则里包括 3 种画板尺寸、28 个版式、10 套主题，以及从单文件 HTML 到 Playwright 截图的流程。</p>
+<p>用户看到的是“同一篇文章输出不同平台的发布包”。开发者看到的却是：识别发布意图，读取平台尺寸，选择模板和图片来源，生成 HTML，调用浏览器渲染 PNG，再决定是否运行 9 条 DOM 版式校验。这里还有一个很重要的真实边界：仓库默认先交付 PNG，再询问用户要不要自动校验，并不是每次都会默默跑完检查。</p>
+<p>模板在这里没有被 Skill 淘汰。模板负责提供稳定起点，Skill 负责决定什么时候选哪一套、如何填充内容、用什么工具渲染、失败以后怎样返工。对用户来说，这些细节最好都看不见；对开发者来说，它们才是“以后还能再做一次”的原因。</p>
+<h2 id="第二条生产线：从只能看的截图到能改的-PPT"><a href="#第二条生产线：从只能看的截图到能改的-PPT" class="headerlink" title="第二条生产线：从只能看的截图到能改的 PPT"></a>第二条生产线：从只能看的截图到能改的 PPT</h2><p>PPT 是更能暴露“交付合同”的案例。</p>
+<p>用户说“帮我复刻这页”，通常不是想得到一张图片塞进 <code>.pptx</code>，而是希望标题真的能改、卡片真的能挪、图表还能换数据。只有截图、扫描 PDF 或图片版旧 PPT 时，这个需求尤其真实。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ningzimu/image-to-editable-ppt-skill"><code>image-to-editable-ppt-skill</code></a> 就围绕这件事展开。它会尽量把可读文字重建为原生文本框，把简单几何重建为形状，复杂视觉则保留成独立图片资产。对用户来说，结果从“只能看”变成“还能接着做”；对开发者来说，“可编辑”必须被拆成能验证的对象清单、页面状态、渲染对照和最终文件检查。</p>
+<p>这条生产线远没有标题听起来轻松。项目 README 明确提醒：单页可能超过 10 分钟，10 页任务可能耗尽 5 小时额度，还会消耗 OCR、图片 API、多智能体和大量 token。它也不承诺 100% 还原。把这些成本写出来，比一句“AI 自动转 PPT”更接近用户真正会遇到的体验。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/crazyykhllc-bit/CyberPPT"><code>CyberPPT</code></a> 处理的是另一类需求：高密度、咨询风、可编辑的正式汇报。它把证据底稿、故事线、风格确认、逐页视觉蓝图、可编辑层和多轮质量检查接进流程。仓库自己的建议也很诚实：让 AI 完成约 90%，剩下 10% 由人收尾；复杂曲线和图标容易有偏差，追求 100% 会显著增加 token 与调试成本。</p>
+<p class="post-pullquote"><strong>“生成了”不等于“交付了”。</strong>真正的终点是能打开、能修改、符合尺寸，并且知道哪些部分仍需要人工复核。</p>
+
+<h2 id="第三类-Skill-其实不太像工厂"><a href="#第三类-Skill-其实不太像工厂" class="headerlink" title="第三类 Skill 其实不太像工厂"></a>第三类 Skill 其实不太像工厂</h2><p>并不是带着 <code>SKILL.md</code> 的项目都会形成完整生产线。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/brycewang-stanford/Awesome-Journal-Skills"><code>Awesome-Journal-Skills</code></a> 更像期刊与会议写作规则的索引。它的深度包可以覆盖选题、识别策略、表图规范、投稿和审稿回复；另一些广度合集主要提供 venue fit、写作风格和路由信息。</p>
+<p>截至 2026 年 7 月 10 日，项目 README 报告了 289 个 pack、4030 个 <code>SKILL.md</code>。这个规模说明 Agent Skill 生态增长很快，却不代表 4030 份内容都经过了学术事实审查。它当前也更偏 Claude Code marketplace 和通用 Agent Skill，并非 Codex 专属项目。</p>
+<p>对研究者来说，这类 Skill 可以少翻几遍投稿规范；对开发者来说，它的核心更接近知识路由和上下文选择，而不是浏览器渲染、文件验证与失败恢复。引用是否真实、方法是否适用、数据能否交给外部模型，仍然需要研究者自己负责。</p>
+<p>把它和前两个案例放在一起，反而能看清一个光谱：有的 Skill 主要保存审美与规则，有的连接模板、渲染器和校验器，还有的已经带着状态文件与失败恢复。把它们统称为“内容工厂”很方便，但工程成熟度并不一样。</p>
+<h2 id="它不是一键魔法"><a href="#它不是一键魔法" class="headerlink" title="它不是一键魔法"></a>它不是一键魔法</h2><p>从用户视角看，好的 Skill 应该让操作越来越短；从开发者视角看，稳定性来自更多明确约束，而不是更强烈的承诺。</p>
+<p>真正使用时，至少还有这些成本：</p>
+<ul>
+<li><strong>安装与环境</strong>：浏览器、字体、Office 运行时、Python 或 Node 依赖缺一项，都可能卡住流程。</li>
+<li><strong>时间与费用</strong>：图片生成、OCR、多智能体和长文档重建会消耗额度，也可能比手工改一页更慢。</li>
+<li><strong>随机性</strong>：同一套风格规则能提高一致性，不能保证每次构图都合格。</li>
+<li><strong>人工复核</strong>：事实、引用、版权、错字、复杂图表和最终审美不能只靠“脚本通过”。</li>
+<li><strong>隐私与权限</strong>：论文数据、客户材料和未公开方案进入哪些模型、脚本和外部服务，需要在运行前说清楚。</li>
+</ul>
+<p>一条生产线真正成熟的标志，不是它永远不失败，而是失败能被看见：知道停在哪一步，保留了哪些中间文件，修正后能否续跑，错误产物会不会被误当成最终交付。</p>
+<h2 id="什么最值得做成自己的-Skill"><a href="#什么最值得做成自己的-Skill" class="headerlink" title="什么最值得做成自己的 Skill"></a>什么最值得做成自己的 Skill</h2><p>我现在不会再用“公共知识还是私人偏好”来区分价值。代码工作流同样值得 Skill 化：项目入口、迁移命令、测试、回滚和发布验收，和内容工作流里的尺寸、审美、渲染与校验，本质上都是稳定约束。</p>
+<p>更实用的判断方法是“三次法”：同一类任务连续做三次，如果每次都在重复解释相同规则、整理相同文件、执行相同步骤，就值得考虑封装。</p>
+<p>动手前，我会先回答六个问题：</p>
+<ol>
+<li>什么样的请求应该触发它，什么请求不该触发？</li>
+<li>用户需要提供哪些输入，缺少什么就必须停下来问？</li>
+<li>哪些步骤交给模型判断，哪些更适合确定性脚本？</li>
+<li>中间文件和状态写在哪里，失败后怎样继续？</li>
+<li>什么算完成，哪些检查能自动做，哪些必须让人确认？</li>
+<li>用户最终拿到什么：一张预览图，还是可继续编辑和发布的文件？</li>
+</ol>
+<p>这六个问题答不清，Skill 很可能只是一个收藏起来的长 prompt。答清以后，它才开始像工作流。</p>
+<p>所以，Codex Skill 被“玩成内容工厂”真正有意思的地方，不是 AI 突然更会写、更会画了。创作者想要的是少说几遍、少做几轮机械整理，最后拿到能用的东西；开发者要做的是让这份“能用”变成可重复、可观察、可验证的交付合同。</p>
+<p>两种视角合在一起，内容工厂才不只是一个好听的比喻。</p>
+
+      </div>
+
+      <!-- Post Footer -->
+      <footer class="post-footer" style="padding: var(--spacing-lg, 1.5rem) var(--spacing-xl, 2rem); border-top: 1px solid var(--border-default); background: var(--bg-secondary);">
+        
+          <div class="blog-card-tags" style="margin-bottom: var(--spacing-md);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-tertiary);">
+              <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1 -2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 2.82 2.82z"></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+            
+              <a href="/tags/Codex/" class="blog-card-tag">
+                Codex
+              </a>
+            
+              <a href="/tags/AI/" class="blog-card-tag">
+                AI
+              </a>
+            
+              <a href="/tags/Skill/" class="blog-card-tag">
+                Skill
+              </a>
+            
+          </div>
+        
+        <div style="display: flex; justify-content: flex-end; align-items: center;">
+          <button class="blog-card-share" onclick="sharePost(&#34;用 Codex Skill 搭一条内容生产线&#34;, &#34;https://licsber.site/2026/07/03/&#34;)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            分享
+          </button>
+        </div>
+      </footer>
+      
+
+
+  <section class="post-comments" data-animate>
+    <h2 class="post-comments-title">评论</h2>
+    <div
+      id="giscus-comments"
+      class="giscus-shell"
+      data-repo="licsber/licsber.github.io"
+      data-repo-id="MDEwOlJlcG9zaXRvcnkyNDc0NzQyMjY="
+      data-category="Announcements"
+      data-category-id="DIC_kwDODsAoMs4DANcU"
+      data-mapping="specific"
+      
+      data-term="2026/07/03/用 Codex Skill 搭一条内容生产线"
+      
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="transparent_dark"
+      data-lang="zh-CN"
+      data-loading="lazy">
+    </div>
+    <script>
+      (function() {
+        const shell = document.getElementById('giscus-comments');
+        if (!shell) return;
+
+        const hostname = window.location.hostname;
+        const localHosts = ['localhost', '127.0.0.1', '::1', '[::1]'];
+
+        if (localHosts.includes(hostname) || hostname.endsWith('.local')) {
+          shell.innerHTML = '<p class="giscus-local-note">本地预览已跳过评论加载，避免创建测试 Discussion。</p>';
+          return;
+        }
+
+        const giscusScript = document.createElement('script');
+        giscusScript.src = 'https://giscus.app/client.js';
+        giscusScript.async = true;
+        giscusScript.crossOrigin = 'anonymous';
+
+        [
+          'repo',
+          'repoId',
+          'category',
+          'categoryId',
+          'mapping',
+          'term',
+          'strict',
+          'reactionsEnabled',
+          'emitMetadata',
+          'inputPosition',
+          'theme',
+          'lang',
+          'loading'
+        ].forEach(function(key) {
+          const value = shell.dataset[key];
+          if (!value) return;
+          giscusScript.setAttribute('data-' + key.replace(/[A-Z]/g, function(letter) {
+            return '-' + letter.toLowerCase();
+          }), value);
+        });
+
+        shell.appendChild(giscusScript);
+      })();
+    </script>
+  </section>
+
+
+    </article>
+
+    <!-- Sidebar -->
+    <div class="sticky-sidebar">
+      <aside class="sidebar">
+  
+  
+
+  <!-- Profile -->
+  
+    <div class="sidebar-section sidebar-profile" data-animate data-delay="0s">
+      
+        <div class="sidebar-avatar">
+          <img src="https://avatars.githubusercontent.com/licsber" alt="licsber">
+        </div>
+      
+      
+        <p class="sidebar-bio">软件工程师 / 开源爱好者</p>
+      
+    </div>
+  
+
+  <!-- Categories -->
+  
+    <div class="sidebar-section" data-animate data-delay="0.1s">
+      <h3 class="sidebar-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+        </svg>
+        分类
+      </h3>
+      <ul class="sidebar-list">
+        
+          <li class="sidebar-list-item">
+            <a href="/categories/life/">
+              <span>life</span>
+              <span class="count">4</span>
+            </a>
+          </li>
+        
+          <li class="sidebar-list-item">
+            <a href="/categories/book/">
+              <span>book</span>
+              <span class="count">5</span>
+            </a>
+          </li>
+        
+          <li class="sidebar-list-item">
+            <a href="/categories/tech/">
+              <span>tech</span>
+              <span class="count">4</span>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  
+
+  <!-- Tag Cloud -->
+  
+    
+    
+    
+    <div class="sidebar-section" data-animate data-delay="0.3s">
+      <h3 class="sidebar-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        标签云
+      </h3>
+      <div class="tag-cloud">
+        
+          <a href="/tags/%E4%BA%BA%E6%9C%88%E7%A5%9E%E8%AF%9D/" class="tag-cloud-item xl">
+            人月神话
+          </a>
+        
+          <a href="/tags/LOVE/" class="tag-cloud-item lg">
+            LOVE
+          </a>
+        
+          <a href="/tags/Hexo/" class="tag-cloud-item lg">
+            Hexo
+          </a>
+        
+          <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="tag-cloud-item lg">
+            项目管理
+          </a>
+        
+          <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" class="tag-cloud-item xl">
+            软件工程
+          </a>
+        
+          <a href="/tags/%E9%9A%8F%E5%9B%AD%E9%A3%9F%E5%8D%95/" class="tag-cloud-item sm">
+            随园食单
+          </a>
+        
+          <a href="/tags/Docker/" class="tag-cloud-item sm">
+            Docker
+          </a>
+        
+          <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/" class="tag-cloud-item sm">
+            项目经理
+          </a>
+        
+          <a href="/tags/%E9%80%9A%E5%BE%80%E5%A5%B4%E5%BD%B9%E4%B9%8B%E8%B7%AF/" class="tag-cloud-item sm">
+            通往奴役之路
+          </a>
+        
+          <a href="/tags/%E5%93%88%E8%80%B6%E5%85%8B/" class="tag-cloud-item sm">
+            哈耶克
+          </a>
+        
+          <a href="/tags/Codex/" class="tag-cloud-item sm">
+            Codex
+          </a>
+        
+          <a href="/tags/AI/" class="tag-cloud-item sm">
+            AI
+          </a>
+        
+          <a href="/tags/Skill/" class="tag-cloud-item sm">
+            Skill
+          </a>
+        
+      </div>
+    </div>
+  
+
+  <!-- Archives -->
+  
+
+  <!-- Recent Posts -->
+  
+    <div class="sidebar-section" data-animate data-delay="0.5s">
+      <h3 class="sidebar-title">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        最新文章
+      </h3>
+      <ul class="sidebar-list">
+        
+          
+            <li class="sidebar-list-item">
+              <a href="/2023/08/08/" title="licsber英文名的由来">
+                <span>licsber英文名的由来</span>
+              </a>
+            </li>
+          
+            <li class="sidebar-list-item">
+              <a href="/2023/08/14/" title="知识的诅咒">
+                <span>知识的诅咒</span>
+              </a>
+            </li>
+          
+            <li class="sidebar-list-item">
+              <a href="/2023/08/20/" title="第四次博客重构">
+                <span>第四次博客重构</span>
+              </a>
+            </li>
+          
+            <li class="sidebar-list-item">
+              <a href="/2024/01/14/" title="个人能力和个人资源哪个更重要？论&#34;关系户&#34;的合理性">
+                <span>个人能力和个人资源哪个更重要？论&#34;关系户...</span>
+              </a>
+            </li>
+          
+            <li class="sidebar-list-item">
+              <a href="/2024/02/06/" title="现存项目里加人是一场豪赌">
+                <span>现存项目里加人是一场豪赌</span>
+              </a>
+            </li>
+          
+        
+      </ul>
+    </div>
+  
+</aside>
+
+    </div>
+  </div>
+</main>
+
+
+    <!-- Footer -->
+    
+<footer class="footer">
+  <div class="footer-content">
+    <!-- Brand -->
+    <div class="footer-brand">
+      <span class="footer-brand-name">LicsberBlog</span>
+      <span class="footer-brand-desc">licsber滴个人博客 望赛博永生(</span>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="footer-links">
+      
+        <a href="/" class="footer-link">
+          首页
+        </a>
+      
+        <a href="/archives/" class="footer-link">
+          归档
+        </a>
+      
+        <a href="/friends/" class="footer-link">
+          友链
+        </a>
+      
+        <a href="/about/" class="footer-link">
+          关于
+        </a>
+      
+    </nav>
+
+    <div class="footer-divider"></div>
+
+    <!-- Copyright -->
+    <div class="footer-copyright">
+      
+        <p style="margin-bottom: var(--spacing-xs);">
+          <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备20005684号</a>
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?b2c308f93e7bceb93c8cb159fddc5df5";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+        </p>
+      
+      <p>
+        &copy; 2026 licsber
+      </p>
+      <p style="margin-top: var(--spacing-xs);">
+        Powered by <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- Back to Top Button -->
+    
+<button class="back-to-top" id="back-to-top" aria-label="返回顶部">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+
+
+    <!-- Scripts -->
+    <script>
+(function() {
+  'use strict';
+
+  // Configuration
+  const config = {
+    navbarThreshold: 50,
+    backToTopThreshold: 400,
+    scrollProgressEnabled: true,
+    backToTopEnabled: true
+  };
+
+  // Scroll Progress Bar
+  if (config.scrollProgressEnabled) {
+    const scrollProgress = document.getElementById('scroll-progress');
+    if (scrollProgress) {
+      window.addEventListener('scroll', function() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        scrollProgress.style.width = progress + '%';
+      }, { passive: true });
+    }
+  }
+
+  // Navbar Scroll Effect
+  const navbar = document.getElementById('navbar');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  
+  if (navbar) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > config.navbarThreshold) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+  }
+
+  // Mobile Menu Toggle
+  const navLinksMobile = document.getElementById('nav-links-mobile');
+  
+  if (mobileMenuBtn && navLinksMobile) {
+    let isMenuOpen = false;
+    const menuIcon = mobileMenuBtn.querySelector('.menu-icon');
+    const closeIcon = mobileMenuBtn.querySelector('.close-icon');
+
+    mobileMenuBtn.addEventListener('click', function() {
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        navLinksMobile.classList.add('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        if (menuIcon) menuIcon.style.display = 'none';
+        if (closeIcon) closeIcon.style.display = 'block';
+      } else {
+        navLinksMobile.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      }
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (navbar && !navbar.contains(e.target) && isMenuOpen) {
+        isMenuOpen = false;
+        navLinksMobile.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      }
+    });
+
+    // Close menu when clicking a link
+    navLinksMobile.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        isMenuOpen = false;
+        navLinksMobile.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && isMenuOpen) {
+        isMenuOpen = false;
+        navLinksMobile.classList.remove('open');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuIcon) menuIcon.style.display = 'block';
+        if (closeIcon) closeIcon.style.display = 'none';
+      }
+    });
+  }
+
+  // Back to Top Button
+  if (config.backToTopEnabled) {
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+      backToTop.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > config.backToTopThreshold) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }, { passive: true });
+    }
+  }
+
+  // Hero Mouse Parallax Effect
+  const hero = document.getElementById('hero');
+  if (hero) {
+    const heroBg = hero.querySelector('.hero-bg');
+    if (heroBg) {
+      let animationFrame;
+      let currentX = 0;
+      let currentY = 0;
+      let targetX = 0;
+      let targetY = 0;
+
+      hero.addEventListener('mousemove', function(e) {
+        const rect = hero.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        targetX = x * 20;
+        targetY = y * 20;
+      });
+
+      hero.addEventListener('mouseleave', function() {
+        targetX = 0;
+        targetY = 0;
+      });
+
+      function animate() {
+        currentX += (targetX - currentX) * 0.1;
+        currentY += (targetY - currentY) * 0.1;
+        heroBg.style.transform = 'scale(1.1) translate(' + currentX + 'px, ' + currentY + 'px)';
+
+        if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
+          animationFrame = requestAnimationFrame(animate);
+        }
+      }
+
+      animate();
+    }
+  }
+
+  // Intersection Observer for Scroll Animations
+  if ('IntersectionObserver' in window) {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          const delay = element.getAttribute('data-delay') || '0s';
+          element.style.transitionDelay = delay;
+          element.classList.add('visible', 'animate-in');
+          
+          setTimeout(function() {
+            observer.unobserve(element);
+          }, parseFloat(delay) * 1000 + 600);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('[data-animate]').forEach(function(element) {
+      observer.observe(element);
+    });
+  } else {
+    // Fallback for browsers without IntersectionObserver
+    document.querySelectorAll('[data-animate]').forEach(function(element) {
+      element.classList.add('visible', 'animate-in');
+    });
+  }
+
+  // Share Post Function
+  window.sharePost = function(title, url) {
+    const shareUrl = new URL(url, window.location.origin).href;
+    if (navigator.share) {
+      navigator.share({
+        title: title,
+        url: shareUrl
+      }).catch(function(err) {
+        console.error('Share failed:', err);
+        navigator.clipboard.writeText(shareUrl).then(function() {
+          alert('链接已复制到剪贴板');
+        }).catch(function() {
+          alert('复制失败，请手动复制链接');
+        });
+      });
+    } else {
+      navigator.clipboard.writeText(shareUrl).then(function() {
+        alert('链接已复制到剪贴板');
+      }).catch(function() {
+        alert('复制失败，请手动复制链接');
+      });
+    }
+  };
+
+  // Smooth scroll to element (for anchor links)
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      const href = anchor.getAttribute('href');
+      if (href === '#') {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      } else if (href.length > 1) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          const offset = navbar ? navbar.offsetHeight : 0;
+          const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset - 20;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+
+})();
+</script>
+
+  </body>
+</html>
